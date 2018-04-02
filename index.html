@@ -1,20 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Lightweight CSS</title>
+<title>Lightweight CSS - v0.1.0</title>
 <link rel="stylesheet" href="style.css" />
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <style>
 .page{margin-top:49px}
-.page > .container{background:#fff;border:1px solid #d7dbdd}
+.page > .container{background:#fff;border:1px solid #ceced2}
 .grid-demo {margin:1px 0 0;padding:0}
-.grid-demo > div {
- background:#caccd1;
- border:1px solid #eee;
- border-radius:5px;
- text-align:center;
- padding:1rem
+.grid-demo > div {background:#caccd1;border:.1rem solid #eee;border-radius:.5rem;text-align:center;padding:1rem
 }
 </style>
 </head>
@@ -23,13 +19,13 @@
     <div class="container">
         <div class="nav-brand">
             <a href="/">
-                <h1>Lightweight CSS</h1>
+                Lightweight CSS
             </a>
         </div>
         <div class="nav-search">
             <form class="search" name="search" action="" method="GET">
                 <input type="text" placeholder="What are you looking for? (Just for representational purpose)">
-                <button type="submit">Search</button>
+                <button type="submit" class="info">Search</button>
             </form>
         </div>
         <div class="nav-link">
@@ -43,13 +39,23 @@
 <div class="page">
 <div class="container">
  <div class="row">
-  <h2 id="about">About Lightweight CSS</h2>
+  <h2 id="about">About <span class="codely">Lightweight CSS</span></h2>
   <p>I am a Consultant by the day and a learning web-dev by the night for some personal pet-projects. I am not that much into designing and stuff I have tried to understand various ready to use frameworks like the Bootstrap, Material Design lite, purecss, skeleton to name a few. Every time except maybe for mincss, every other one provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) and maintaining it for every update that comes up (looking at you Bootstrap).So I have created a baseline css which contains only all basic elements that I am mostly going use and are grouped together so removing them is fairly easier. Making it public in case it might be of help to anyone interested.
+  </p>
  </div>
+<div class="row">
+    <h2 id="colors">Colors</h2>
+    <div class="col-2 primary text-center" style="padding:1rem;color:#fff">Primary<br /><strong>#007aff</strong></div>
+    <div class="col-2 info text-center" style="padding:1rem;color:#fff">Info<br /><strong>#5ac8fa</strong></div>
+    <div class="col-2 note text-center" style="padding:1rem;color:#fff">Note<br /><strong>#ffcc00</strong></div>
+    <div class="col-2 danger text-center" style="padding:1rem;color:#fff">Danger<br /><strong>#ff3b30</strong></div>
+    <div class="col-2 warning text-center" style="padding:1rem;color:#fff">Warning<br /><strong>#ff9500</strong></div>
+    <div class="col-2 success text-center" style="padding:1rem;color:#fff">Success<br /><strong>#4cd964</strong></div>
+</div>
 <div class="row">
     <h2 id="elements">Elements</h2>
     <p>
-    Following are the items included in the css (13KB Non-minified, Non-gzipped . <span class="strong">3.7 gzipped, 3.3KB minified and gzipped</span>)
+    Following are the items included in the css (13KB Non-minified, Non-gzipped . <span class="strong">3.5KB minified and gzipped</span>)
     <ol class="v-list">
       <li><a href="#page">Page Structure</a></li>
       <li><a href="#grids">Grids</a></li>
@@ -63,6 +69,7 @@
               <li><a href="#text-align-center">Centered</a></li>
               <li><a href="#text-align-justified">Justified Text</a></li>
               <li><a href="#text-invisible">Invisible Text</a></li>
+              <li><a href="#text-highlight">Highlight Text</a></li>
           </ol>
       </li>
       <li><a href="#lists">Lists</a></li>
@@ -76,13 +83,9 @@
                   <li><a href="#left">Left floating Div</a></li>
                   <li><a href="#right">Right floating Div</a></li>
                   <li><a href="#center">Center floating Div</a></li>
-                  <li><a href="#horizontal-align">Align Horizontally</a></li>
-                  <li><a href="#vertical-align">Align Vertically</a></li>
-                  <li><a href="#clearfix">Clearfix</a></li>
                   <li><a href="#badge">Badges</a></li>
                   <li><a href="#label">Labels</a></li>
                   <li><a href="#alert">Alerts</a></li>
-                  <li><a href="#progressbar">Progress Bar</a></li>
                   <li><a href="#fullscreen">Fullscreen div</a></li>
                   <li><a href="#hide-show">Hide / Show a div</a></li>
               </ol>
@@ -208,7 +211,7 @@
     </p>
         <div class="nav">
             <div class="nav-brand">
-                <h1>My Startup</h1>
+                <a href="#">My Startup</a>
             </div>
             <div class="nav-link">
                 <a href="#">Link 1</a>
@@ -239,7 +242,8 @@
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
-
+    <br/>
+    <p>Use <code>class="codely"</code> for <span class="codely">this console-like font</span>.</p>
     <p class="big">This is slightly bigger than normal.<code>class="big"</code></p>
     <p class="small">This is slightly smaller than normal.<code>class="small"</code></p>
     <p>Blockquote:
@@ -264,9 +268,9 @@ print('Hello, world!')</code></pre>
 
 <div class="row">
     <h2 id="responsive_image">Responsive Image</h2>
-    <p>Use <code>class="img-responsive"</code> on any img tag to make it responsive.
+    <p>Use <code>class="responsive"</code> on any img tag to make it responsive.
     <br />
-    <img class="img-responsive" src="//placehold.it/950x450" alt="Responsive Image testing" />
+    <img class="responsive" src="//placehold.it/950x450" alt="Responsive Image testing" />
     Nothing specific about 950x450, just a relatively large image for testing responsive-ness
     </p>
 </div>
@@ -332,6 +336,14 @@ print('Hello, world!')</code></pre>
 </div>
 
 <div class="row">
+    <h2 id="text-highlight">Highlight Text</h2>
+    <p>Use <code>class="highlight"</code> to highlight a span of text as shown below.</p>
+    <p>
+         Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for <span class="highlight">'lorem ipsum'</span> will uncover many web sites still in their infancy.
+    </p>
+</div>
+
+<div class="row">
     <h2 id="lists">Lists</h2>
     <div class="col col-6">
     <h1>Lists & Nested lists</h1>
@@ -394,7 +406,7 @@ print('Hello, world!')</code></pre>
     <h2 id="table">Tables</h2>
     <h3>Simple Table</h3>
     <p>Default table syntax would do fine</p>
-    <table class="table">
+    <table>
     <thead>
         <tr>
             <th>#</th>
@@ -454,8 +466,8 @@ print('Hello, world!')</code></pre>
     </tbody>
     </table>
     <h3>Striped Table</h3>
-    <p>Using <code>class="table table-striped"</code> to create striped tables</p>
-    <table class="table table-striped">
+    <p>Using <code>class="table-striped"</code> to create striped tables</p>
+    <table class="table-striped">
         <thead>
             <tr>
                 <th>#</th>
@@ -533,6 +545,11 @@ print('Hello, world!')</code></pre>
         <div class="input-group">
             <label for=password>Password</label>
             <input id=password type=password placeholder='input type="password"' />
+        </div>
+        <div class="input-group">
+            <label for=password_with_error>Field with an error</label>
+            <input id=password_with_error type=password class="error" placeholder='input with an error' />
+            <div class="error-text">This is an error<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
         </div>
         <div class="input-group">
             <label for=textarea>Textarea</label>
@@ -633,24 +650,11 @@ print('Hello, world!')</code></pre>
             <input id=ranges type=range min=0 max=15 step=3 />
         </div>
         <div class="input-group">
-            <label for=color>Color</label>
-            <input id=color type=color />
-        </div>
-        <div class="input-group">
-            <label for=colorwdefault>Color with Default value</label>
-            <input id=colorwdefault type=color value="#ff00ff" />
-        </div>
-        <div class="input-group">
-            <label for="progressdefault">Progress with No Default Value</label>
-            <progress id="progressdefault" value="0" />
-        </div>
-        <div class="input-group">
-            <label for="progress">Progress bar with value</label>
-            <progress id="progress" max="100" value="50" />
-        </div>
-        <div class="input-group">
-            <label for=meter>Meter</label>
-            <meter id="meter" value="50" min="0" max="100" low="25" high="75" optimum="15"></meter>
+            <h2 id="progressbar">Progress Bar</h2>
+            <p>Use <code>class="progress"</code> and then a child div with <code>class="progress-bar"</code> and provide width: <code>style="width:X%</code></p>
+            <div class="progress">
+                <div class="progress-bar" style="width:74%;"></div>
+            </div>
         </div>
         <div class="row input-group">
             <div class="col-4"><input type="submit" value="Submit" /></div>
@@ -660,10 +664,13 @@ print('Hello, world!')</code></pre>
         <div class="row input-group">
         <p>Some Buttons</p>
         <p><button type="button" class="btn">Default Button</button> .Use <code>class="btn"</code></p>
-        <p><button type="button" class="btn danger">Danger</button> .Use <code>class="btn btn-dan"</code></p>
-        <p><button type="button" class="btn warning">Warning</button> .Use <code>class="btn btn-warn"</code></p>
-        <p><button type="button" class="btn success">Success</button> .Use <code>class="btn btn-suc"</code></p>
-        <p><button type="button" class="btn clear">Clear</button> .Use <code>class="btn btn-clear"</code></p>
+        <p><button type="button" class="btn primary">Primary</button> .Use <code>class="btn primary"</code></p>
+        <p><button type="button" class="btn info">Info</button> .Use <code>class="btn info"</code></p>
+        <p><button type="button" class="btn note">Note</button> .Use <code>class="btn note"</code></p>
+        <p><button type="button" class="btn danger">Danger</button> .Use <code>class="btn danger"</code></p>
+        <p><button type="button" class="btn warning">Warning</button> .Use <code>class="btn warning"</code></p>
+        <p><button type="button" class="btn success">Success</button> .Use <code>class="btn success"</code></p>
+        <p><button type="button" class="btn clear">Clear</button> .Use <code>class="btn clear"</code></p>
         <p><button type="button" class="btn btn-full">Big One</button> .Use <code>class="btn btn-full"</code></p>
         </div>
     </fieldset>
@@ -671,7 +678,7 @@ print('Hello, world!')</code></pre>
 
 <div class="row">
     <h2 id="pagination">Pagination</h2>
-    <p>Use <code>class="pagination"</code> for any list to be used for pagination. Also you use pagination with-in text-left/right/center for aligning the pagination accordingly.</p>
+    <p>Use <code>class="pagination"</code> for any list to be used for pagination. Also you use pagination with-in text-left/right/center <span class="highlight">for aligning the pagination</span> accordingly.</p>
 
     <p>Example: Default Alignment</p>
         <ul class="pagination">
@@ -722,34 +729,7 @@ print('Hello, world!')</code></pre>
 <div class="row">
     <h2 id="center">Center floating Div</h2>
     <p><code>class="center"</code> keeps the div floating in the center.</p>
-    <div class="center">This is absolutely in the center</div>
-</div>
-
-<div class="row">
-    <h2 id="horizontal-align">Align Horizontally</h2>
-    <p><code>class="h-align"</code> <br /><strong>Note</strong>: Flex based.Cautious though (regarding old browsers compatability) </p>
-    <div class="h-align" style="height:400px;background:#f1f1f1">
-        <div>This is a horizontally aligned div</div>
-        <div>...Just add class: h-align to any div</div>
-        <div>...you want to align horizontally in center</div>
-    </div>
-</div>
-
-<div class="row">
-    <h2 id="vertical-align">Align Vertically</h2>
-    <p><code>class="v-align"</code> <br /><strong>Note</strong>: Flex based.Cautious though (regarding old browsers compatability) </p>
-    <div class="v-align" style="height:400px;background:#f1f1f1">
-        <div>This is a vertically aligned div</div>
-        <div>Just add class: v-align to any div</div>
-        <div>you want to align vertically in center</div>
-    </div>
-</div>
-
-<div class="row">
-    <h2 id="clearfix">Clearfix</h2>
-    <p>If the child divs have floats or would get floats added dynamically,A clearfix is a way for an element to automatically clear its child elements, so that you don't need to add additional markup. It's generally used in float layouts where elements are floated to be stacked horizontally. The clearfix is a way to combat the zero-height container problem for floated elements. <br /><br />
-    <a href="http://stackoverflow.com/questions/8554043/what-is-a-clearfix">What is a clearfix</a><br />
-    A clearfix is performed by using <code>class="clearfix"</code> to the parent div that has or would contain floated divs</p>
+    <div class="center" style="height:400px;background:#f1f1f1">This is absolutely in the center</div>
 </div>
 
 <div class="row">
@@ -766,6 +746,8 @@ print('Hello, world!')</code></pre>
     <p>
     <span class="label">Default Label</span>
     <span class="label primary">Primary</span>
+    <span class="label info">Info!</span>
+    <span class="label note">Note</span>
     <span class="label danger">Danger!</span>
     <span class="label success">Success</span>
     <span class="label warning">Warning</span>
@@ -777,6 +759,8 @@ print('Hello, world!')</code></pre>
     <p>Use <code>class="alert"</code> for creating a label. Add primary / danger / success / warning for different flavors. </p>
     <p>
     <div class="alert">Default alert with <code>class="alert"</code><span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
+    <div class="alert info">Info alert with <code>class="alert info"</code><span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
+    <div class="alert note">Note alert with <code>class="alert note"</code><span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
     <div class="alert danger">Dangerous alert with <code>class="alert danger"</code> for dangerous alert<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
     <div class="alert warning">Warning alert with <code>class="alert warning"</code> for giving a warning<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
     <div class="alert success">Success alert with <code>class="alert success"</code> for successful alert<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
@@ -784,16 +768,8 @@ print('Hello, world!')</code></pre>
 </div>
 
 <div class="row">
-    <h2 id="progressbar">Progress Bar</h2>
-    <p>Use <code>class="progress"</code> and then a child div with <code>class="progress-bar"</code> and provide width: <code>style="width:X%</code></p>
-    <div class="progress">
-        <div class="progress-bar" style="width:74%;"></div>
-    </div>
-</div>
-
-<div class="row">
     <h2 id="fullscreen">Fullscreen div</h2>
-    <p>Use <code>class="fullscreen"</code> on a div to keep a div with 100% width and 100vh height. Cautious though (regarding old browsers compatability) </p>
+    <p>Use <code>class="fullscreen"</code> on a div to keep a div with 100% width and 100vh height.</p>
     <div class="fullscreen" style="background:#f1f1f1">
            <p>This is a fullscreen div</p>
     </div>
@@ -811,8 +787,8 @@ print('Hello, world!')</code></pre>
     <p>Adding <code>class="nomargin"</code> will make the element have 0 margin.</p>
     <p class="nomargin" style="border:1px solid #ddd;padding:10px">Example: This paragraph has no margin (in lightweight css, paragraph's have bottom margin unless its the last paragraph).</p>
     <p>Adding <code>class="nobackground"</code> would make the element have no background. Example: <a href="#" class="btn nobackground" style="color:#000">No Padding</a></p>
-    <p>Adding <code>class="margin20"</code> would make the element have a 4-sided fixed 20px margin.</p>
-    <p class="margin20" style="border:1px solid #ddd;padding:10px">Example: This paragraph has no margin (in lightweight css, paragraph's have bottom margin unless its the last paragraph).</p>
+    <p>Adding <code>class="margin2rem"</code> would make the element have a 4-sided fixed 2rem margin.</p>
+    <p class="margin2rem" style="border:1px solid #ddd;padding:10px">Example: This paragraph has no margin (in lightweight css, paragraph's have bottom margin unless its the last paragraph).</p>
 </div>
 <div class="row">
     <h2>Final Thoughts</h2>
@@ -820,9 +796,11 @@ print('Hello, world!')</code></pre>
 </div>
 </div><!-- Ends Container -->
 </div><!-- Ends Page -->
-<div class="footer container">
-<div class="col-6">Just a sticky footer,make sure you use it outside of <code>class="page"</code> and this would be down.</div>
-<div class="col-6 text-right">Just a try <br/> -Kevin</div>
+<div class="footer">
+    <div class="row container">
+        <div class="col-6">Just a sticky footer,make sure you use it outside of <code>class="page"</code> and this would be down.</div>
+        <div class="col-6 text-right">Just a try <br/> -Kevin</div>
+    </div>
 </div>
 </body>
 </html>
