@@ -50,7 +50,12 @@ body{
  -ms-text-size-adjust:100%;
  -webkit-text-size-adjust:100%;
 }
-::selection{text-shadow:none;background:#e4f0fe}
+::selection{
+ background:#e4f0fe
+}
+::-moz-selection{
+ background:#e4f0fe
+}
 .page{
  min-height:100%;
  min-width:320px;

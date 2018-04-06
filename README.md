@@ -8,4 +8,4 @@ Changes in 0.1.0
  * Added Error class
  * Removed un-used classes for input type=color, range,etc.
 
-[For Complete Reference](https://ikevinshah.github.io/lightweight-css/)
+[For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
