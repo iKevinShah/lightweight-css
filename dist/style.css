@@ -484,9 +484,6 @@ input[type=checkbox]:checked + label:before{
  font-weight:700;
  content:"\2713"
 }
-input:-moz-read-only{
- background:#ededed
-}
 select[multiple],select[size]{
  height:auto
 }
