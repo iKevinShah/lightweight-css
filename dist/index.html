@@ -1,16 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lightweight CSS - v0.2.0</title>
+    <title>Lightweight CSS - v0.3</title>
     <link rel="stylesheet" href="style.css" />
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <style>
-        .page{margin-top:49px;padding:1px 0 0 0}
-        .grid-demo {margin:1px 0 0;padding:0}
-        .grid-demo > div {background:#caccd1;border:.1rem solid #eee;border-radius:.7rem;text-align:center;padding:1rem
+        .page{margin:4rem 0;padding:1px 0 0 0}
+        .grid-demo {margin:0;padding:0}
+        .grid-demo > div {background:#caccd1;border:.0625rem solid #eee;border-radius:.5rem;text-align:center;padding:1rem
         }
+        @media screen and (max-width:768px){
+            .colors .col-1{margin-bottom:1rem;border-radius:.5rem}
+        }
+        .colors .danger{background:linear-gradient(to right bottom, #ff3824 50%, #ff5f4f 50%)}
+        .colors .success{background:linear-gradient(to right bottom, #4cd964 50%, #6fe083 50%)}
+        .colors .primary{background:linear-gradient(to right bottom, #0076ff 50%, #3291ff 50%)}
+        .colors .info{background:linear-gradient(to right bottom, #07aefb 50%, #38befb 50%)}
+        .colors .warning{background:linear-gradient(to right bottom, #ff9600 50%, #ffab32 50%)}
+        .colors .note{background:linear-gradient(to right bottom, #ffcd00 50%, #ffd732 50%)}
+        .colors .branding{background:linear-gradient(to right bottom, #5856d6 50%, #7977de 50%)}
+        .colors .delight{background:linear-gradient(to right bottom, #ff2d55 50%, #ff5676 50%)}
     </style>
 </head>
 <body>
@@ -24,7 +36,7 @@
         <div class="nav-search">
             <form class="search" name="search" action="" method="GET">
                 <input type="text" placeholder="What are you looking for? (Just for representational purpose)">
-                <button type="submit" class="primary">Search</button>
+                <button type="submit">🔍</button>
             </form>
         </div>
         <div class="nav-link">
@@ -41,22 +53,25 @@
             <h2 id="about">About <span class="codely">Lightweight CSS</span></h2>
             <p>I am a Consultant by the day and a learning web-dev by the night for some personal pet-projects. I am not that much into designing and stuff I have tried to understand various ready to use frameworks like the Bootstrap, Material Design lite, purecss, skeleton to name a few. Every time except maybe for mincss, every other one provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) and maintaining it for every update that comes up (looking at you Bootstrap).So I have created a baseline css which contains only all basic elements that I am mostly going use and are grouped together so removing them is fairly easier. Making it public in case it might be of help to anyone interested.
             </p>
+            <p>
+                A note over the font, it uses no pixels (or doesn't set a fixed font size). <span class="highlight">This is by design</span>, it is to respect user's chosen font-size (Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
+            </p>
         </div>
-        <div class="row content">
+        <div class="row content colors">
             <h2 id="colors">Color Pallete</h2>
-            <div class="col-1 danger text-center" style="padding:1rem;color:#fff;border-radius:.7rem 0 0 .7rem">Danger<br /><strong>#ff3824</strong></div>
+            <div class="col-1 danger text-center" style="padding:1rem;color:#fff;">Danger<br /><strong>#ff3824</strong></div>
             <div class="col-1 success text-center" style="padding:1rem;color:#fff">Success<br /><strong>#49a942</strong></div>
             <div class="col-1 primary text-center" style="padding:1rem;color:#fff">Primary<br /><strong>#0076ff</strong></div>
-            <div class="col-1 info text-center" style="padding:1rem;color:#fff">Info<br /><strong>#54c7fc</strong></div>
+            <div class="col-1 info text-center" style="padding:1rem;color:#fff">Info<br /><strong>#07aefb</strong></div>
             <div class="col-1 warning text-center" style="padding:1rem;color:#fff">Warning<br /><strong>#ff9600</strong></div>
             <div class="col-1 note text-center" style="padding:1rem;color:#fff">Note<br /><strong>#ffcd00</strong></div>
             <div class="col-1 branding text-center" style="padding:1rem;color:#fff">Branding<br /><strong>#5856d6</strong></div>
-            <div class="col-1 delight text-center" style="padding:1rem;color:#fff;border-radius:0 .7rem .7rem 0">Delight<br /><strong>#ff2d55</strong></div>
+            <div class="col-1 delight text-center" style="padding:1rem;color:#fff;">Delight<br /><strong>#ff2d55</strong></div>
         </div>
         <div class="row content">
             <h2 id="elements">Elements</h2>
             <p>
-                Following are the items included in the css (13KB Non-minified, Non-gzipped . <span class="strong">3.5KB minified and gzipped</span>)
+                Following are the items included in the css (13.5KB Non-minified, Non-gzipped . <span class="strong">3.58KB minified and gzipped</span>)
             </p>
             <ol class="v-list">
                 <li><a href="#page">Page Structure</a></li>
@@ -71,6 +86,7 @@
                         <li><a href="#text-align-right">Text align right</a></li>
                         <li><a href="#text-align-center">Centered</a></li>
                         <li><a href="#text-align-justified">Justified Text</a></li>
+                        <li><a href="#text-shades">Shades</a></li>
                         <li><a href="#text-invisible">Invisible Text</a></li>
                         <li><a href="#text-highlight">Highlight Text</a></li>
                     </ol>
@@ -83,14 +99,9 @@
                 <li><a href="#responsive_video">Responsive Media (video / iframe / embeds)</a></li>
                 <li>Alignment / Utilities
                     <ol class="v-list">
-                        <li><a href="#left">Left floating Div</a></li>
-                        <li><a href="#right">Right floating Div</a></li>
-                        <li><a href="#center">Center floating Div</a></li>
                         <li><a href="#badge">Badges</a></li>
                         <li><a href="#label">Labels</a></li>
                         <li><a href="#alert">Alerts</a></li>
-                        <li><a href="#h-align">Horizontally Center a Div</a></li>
-                        <li><a href="#v-align">Vertically Center a Div</a></li>
                         <li><a href="#fullscreen">Fullscreen div</a></li>
                         <li><a href="#hide-show">Hide / Show a div</a></li>
                     </ol>
@@ -216,7 +227,7 @@
                 <li>Optionally, you can use <code>class="nav-search"</code> for a centered search div like the one shown on this page (header above). This will stretch and take up all the available space</li>
             </ol>
             <p>The navbar comes by default in black, easily can be changed with background-color in css. Here's a demo nav.</p>
-            <div class="nav">
+            <div class="nav" style="min-width:unset">
                 <div class="nav-brand">
                     <a href="#">My Startup</a>
                 </div>
@@ -272,33 +283,7 @@
             <pre><code># This program prints Hello, world!
 print('Hello, world!')</code></pre>
         </div>
-
-        <div class="row content">
-            <h2 id="responsive_image">Responsive Image</h2>
-            <p>Use <code>class="responsive"</code> on any img tag to make it responsive.
-                <br />
-                <img class="responsive" src="//placehold.it/950x450" alt="Responsive Image testing" />
-                Nothing specific about 950x450, just a relatively large image for testing responsive-ness
-            </p>
-        </div>
-
-        <div class="row content">
-            <h2 id="responsive_video">Responsive Media (video / iframe / embeds)</h2>
-            <p>Use <code>class="video-responsive"</code> and iframe / embed / object as a child div (16:9) Default</p>
-            <div>
-                <div class="video-responsive">
-                    <iframe src="//www.youtube.com/embed/mXVGIb3bzHI" allowfullscreen title="Responsive 16:9 video test" ></iframe>
-                </div>
-            </div>
-            <p>Use <code>class="video-responsive"</code> and iframe / embed / object as a child div for a 4:3 ratio</p>
-            <div>
-                <div class="video-responsive video-responsive-4-3">
-                    <iframe src="//www.youtube.com/embed/mXVGIb3bzHI" allowfullscreen title="Responsive 4:3 video test" ></iframe>
-                </div>
-            </div>
-            <p><strong>Note:</strong> If you are using "video-responsive" where parent is immediately "row", add a &lt;div&gt; between. For details, Inspect the Code in above example</p>
-        </div>
-
+        
         <div class="row content">
             <h2 id="text-align-left">Text align left</h2>
             <p>Use <code>class="text-left"</code> for left-aligned texts</p>
@@ -332,7 +317,29 @@ print('Hello, world!')</code></pre>
                 There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
             </p>
         </div>
-
+        <div class="row content">
+            <h2 id="text-shades">Shades of text</h2>
+            <p>We have <code>class="text-light"</code>,  <code>class="text-lighter"</code> and  <code>class="text-justify"</code></p>
+            Normal: 
+            <p>
+                a quick brown fox jumps over the lazy dog
+            </p>
+            
+            Light: 
+            <p class="text-light">
+                a quick brown fox jumps over the lazy dog
+            </p>
+            
+            Lighter: 
+            <p class="text-lighter">
+                a quick brown fox jumps over the lazy dog
+            </p>
+            
+            Lightest: 
+            <p class="text-lightest">
+                a quick brown fox jumps over the lazy dog
+            </p>
+        </div>
         <div class="row content">
             <h2 id="text-invisible">Invisible Text</h2>
             <p>Use <code>class="text-invisible"</code> for invisible texts</p>
@@ -348,6 +355,32 @@ print('Hello, world!')</code></pre>
             <p>
                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for <span class="highlight">'lorem ipsum'</span> will uncover many web sites still in their infancy.
             </p>
+        </div>
+
+        <div class="row content">
+            <h2 id="responsive_image">Responsive Image</h2>
+            <p>Use <code>class="responsive"</code> on any img tag to make it responsive.
+                <br />
+                <img class="responsive" src="//placehold.it/950x450" alt="Responsive Image testing" />
+                Nothing specific about 950x450, just a relatively large image for testing responsive-ness
+            </p>
+        </div>
+
+        <div class="row content">
+            <h2 id="responsive_video">Responsive Media (video / iframe / embeds)</h2>
+            <p>Use <code>class="video-responsive"</code> and iframe / embed / object as a child div (16:9) Default</p>
+            <div>
+                <div class="video-responsive">
+                    <iframe src="//www.youtube.com/embed/mXVGIb3bzHI" allowfullscreen title="Responsive 16:9 video test" ></iframe>
+                </div>
+            </div>
+            <p>Use <code>class="video-responsive"</code> and iframe / embed / object as a child div for a 4:3 ratio</p>
+            <div>
+                <div class="video-responsive video-responsive-4-3">
+                    <iframe src="//www.youtube.com/embed/mXVGIb3bzHI" allowfullscreen title="Responsive 4:3 video test" ></iframe>
+                </div>
+            </div>
+            <p><strong>Note:</strong> If you are using "video-responsive" where parent is immediately "row", add a &lt;div&gt; between. For details, Inspect the Code in above example</p>
         </div>
 
         <div class="row content">
@@ -664,21 +697,23 @@ print('Hello, world!')</code></pre>
                     </div>
                 </div>
                 <div class="row input-group">
-                    <div class="col-4"><input type="submit" class="button success" value="Submit" /></div>
-                    <div class="col-4"><input type="reset" class="button info" value="Reset" /></div>
-                    <div class="col-4"><a class="button danger" href="#">Cancel</a></div>
+                    <div class="col-4"><input type="submit" class="btn success" value="Submit" /></div>
+                    <div class="col-4"><input type="reset" class="btn info" value="Reset" /></div>
+                    <div class="col-4"><a class="btn danger" href="#">Cancel</a></div>
                 </div>
                 <div class="row input-group">
                     <p>Some Buttons</p>
-                    <p><button type="button" class="button">Default Button</button> .Use <code>class="button"</code></p>
-                    <p><button type="button" class="button primary">Primary</button> .Use <code>class="button primary"</code></p>
-                    <p><button type="button" class="button info">Info</button> .Use <code>class="button info"</code></p>
-                    <p><button type="button" class="button note">Note</button> .Use <code>class="button note"</code></p>
-                    <p><button type="button" class="button danger">Danger</button> .Use <code>class="button danger"</code></p>
-                    <p><button type="button" class="button warning">Warning</button> .Use <code>class="button warning"</code></p>
-                    <p><button type="button" class="button success">Success</button> .Use <code>class="button success"</code></p>
-                    <p><button type="button" class="button clear">Clear</button> .Use <code>class="button clear"</code></p>
-                    <p><button type="button" class="button branding button-full">Big One</button> .Use <code>class="button button-full"</code></p>
+                    <p><button type="btn" class="btn">Default Button</button> .Use <code>class="btn"</code></p>
+                    <p><button type="btn" class="btn primary">Primary</button> .Use <code>class="btn primary"</code></p>
+                    <p><button type="btn" class="btn info">Info</button> .Use <code>class="btn info"</code></p>
+                    <p><button type="btn" class="btn note">Note</button> .Use <code>class="btn note"</code></p>
+                    <p><button type="btn" class="btn danger">Danger</button> .Use <code>class="btn danger"</code></p>
+                    <p><button type="btn" class="btn warning">Warning</button> .Use <code>class="btn warning"</code></p>
+                    <p><button type="btn" class="btn success">Success</button> .Use <code>class="btn success"</code></p>
+                    <p><button type="btn" class="btn branding">Branding</button> .Use <code>class="btn success"</code></p>
+                    <p><button type="btn" class="btn delight">Delightful</button> .Use <code>class="btn success"</code></p>
+                    <p><button type="btn" class="btn clear">Clear</button> .Use <code>class="btn clear"</code></p>
+                    <p><button type="btn" class="btn branding btn-full">Big One</button> .Use <code>class="btn btn-full"</code></p>
                 </div>
             </fieldset>
         </div>
@@ -720,31 +755,12 @@ print('Hello, world!')</code></pre>
                 </ul>
             </div>
         </div>
-
-        <div class="row content">
-            <h2 id="left">Left floating Div</h2>
-            <p><code>class="left"</code> floats the division to the left</p>
-            <div class="left">This floats left. Doesn't use floats.</div>
-        </div>
-
-        <div class="row content">
-            <h2 id="right">Right floating Div</h2>
-            <p><code>class="right"</code> floats the division to the right</p>
-            <div class="right">This floats right. Doesn't use floats.</div>
-        </div>
-
-        <div class="row content">
-            <h2 id="center">Center floating Div</h2>
-            <p><code>class="center"</code> keeps the div floating in the center.</p>
-            <div class="center" style="height:400px;background:#f1f1f1">This is absolutely in the center. Doesn't use floats.</div>
-        </div>
-
         <div class="row content">
             <h2 id="badge">Badges</h2>
             <p>Use <code>class="badge"</code> in a span of text</p>
-            <p><button class="button">Notifications <span class="badge">8</span></button></p>
+            <p><button class="btn">Notifications <span class="badge">8</span></button></p>
             <p>Can take in more than one character in the badge</p>
-            <p><button class="button">Messages <span class="badge">2374+</span></button></p>
+            <p><button class="btn">Messages <span class="badge">2374+</span></button></p>
         </div>
 
         <div class="row content">
@@ -774,27 +790,7 @@ print('Hello, world!')</code></pre>
             <div class="alert note">Note alert with <code>class="alert note"</code><span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
             <div class="alert delight">Hurray! You have a delightful message! <code>class="alert delight"</code>.<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
         </div>
-
-        <div class="row content">
-            <h2 id="h-align">Align Horizontally</h2>
-            <p><code>class="h-align"</code> <br /><strong>Note</strong>: Flex based.Cautious though (regarding old browsers compatability) </p>
-            <div class="h-align" style="height:400px;background:#f1f1f1">
-                <div>This is a horizontally aligned div</div>
-                <div>...Just add class: h-align to any div</div>
-                <div>...you want to align horizontally in center</div>
-            </div>
-        </div>
-
-        <div class="row content">
-            <h2 id="v-align">Align Vertically</h2>
-            <p><code>class="v-align"</code> <br /><strong>Note</strong>: Flex based.Cautious though (regarding old browsers compatability) </p>
-            <div class="v-align" style="height:400px;background:#f1f1f1">
-                <div>This is a vertically aligned div</div>
-                <div>Just add class: v-align to any div</div>
-                <div>you want to align vertically in center</div>
-            </div>
-        </div>
-
+        
         <div class="row content">
             <h2 id="fullscreen">Fullscreen div</h2>
             <p>Use <code>class="fullscreen"</code> on a div to keep a div with 100% width and 100vh height.</p>
@@ -811,7 +807,7 @@ print('Hello, world!')</code></pre>
             <p>Adding <code>class="invisible"</code> would make the div invisible.</p>
             <p>Adding <code>class="visible"</code> would make the div visible, if it was not already.</p>
             <p>Adding <code>class="noborder"</code> would make the element have no border.</p>
-            <p>Adding <code>class="nopadding"</code> will make the element have 0 padding.Example: <a href="#" class="button nopadding">No Padding</a></p>
+            <p>Adding <code>class="nopadding"</code> will make the element have 0 padding.Example: <a href="#" class="btn nopadding">No Padding</a></p>
             <p>Adding <code>class="nomargin"</code> will make the element have 0 margin.</p>
             <p class="nomargin" style="border:1px solid #ddd;padding:10px">Example: This paragraph has no margin (in lightweight css, paragraph's have bottom margin unless its the last paragraph).</p>
             <p>Adding <code>class="margin2rem"</code> would make the element have a 4-sided fixed 2rem margin.</p>
@@ -825,10 +821,8 @@ print('Hello, world!')</code></pre>
 </div><!-- Ends Page -->
 <div class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-6">Just a sticky footer,make sure you use it outside of <code>class="page"</code> and this would be down.</div>
-            <div class="col-6 text-right">Just a try <br/> -Kevin</div>
-        </div>
+        <div class="col-6">Just a sticky footer,make sure you use it outside of <code>class="page"</code> and this would be down.</div>
+        <div class="col-6 text-right">Just a try <br/> -Kevin</div>
     </div>
 </div>
 </body>
