@@ -11,7 +11,7 @@ table{border-collapse:collapse;border-spacing:0}
 button,input{overflow:visible}
 button,select{text-transform:none}
 
-/* Lightweight CSS 0.3.0 */
+/* Lightweight CSS 0.2.0 */
 *,*:before,*:after{
  box-sizing:inherit
 }
@@ -686,9 +686,12 @@ a.btn:hover{
  background:transparent;
  color:inherit
 }
+.clear.btn{
+ color:inherit
+}
 .clear.btn:focus,.clear.btn:hover{
  background:transparent;
- transform:scale(1.1);
+ transform:scale(1.05);
  box-shadow:none;
 }
 .danger{
