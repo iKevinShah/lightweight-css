@@ -11,14 +11,13 @@ table{border-collapse:collapse;border-spacing:0}
 button,input{overflow:visible}
 button,select{text-transform:none}
 
-/* Lightweight CSS 0.2.0 */
+/* Lightweight CSS 0.4.0 */
 *,*:before,*:after{
- box-sizing:inherit
+ box-sizing: border-box;
 }
 html{
- box-sizing:border-box;
  height:100%;
- font:normal normal 500 100% / 1.5 Verdana,Arial,Helvetica,sans-serif;
+ font:normal normal 500 100% / 1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Verdana,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 @media screen and (max-width:1024px){
 html{font-size:93.75%}
@@ -31,10 +30,11 @@ html{font-size:81.25%}
 }
 body{
  min-width:320px;
+ min-height:480px;
+ height:100%;
  background:#eee;
  color:#000;
  letter-spacing:.00625rem;
- height:100%;
  word-spacing:.0625rem;
  text-shadow:none;
  text-rendering:optimizeLegibility;
@@ -47,9 +47,7 @@ body{
 .container{
  width:100%;
  max-width:1346px;
- margin:0 auto
-}
-.page > .container{
+ margin:0 auto;
  padding:0 1rem
 }
 .footer{
@@ -65,7 +63,6 @@ body{
  display:flex;
  flex-flow:row wrap;
  align-items:flex-start;
- margin-top:1.5rem;
 }
 .row > * {
  flex:1 0 100%
@@ -74,7 +71,8 @@ body{
  background:#fff;
  position:relative;
  padding:1.25rem;
- box-shadow:0 .0625rem .25rem .0625rem rgba(0,0,0,0.05),0 0 .5rem .0625rem rgba(0,0,0,.25);
+ border:.0625rem solid rgba(0,0,0,.15);
+ box-shadow:0 .125rem .25rem rgba(0,0,0,0.19), 0 .25rem .5rem rgba(0,0,0,0.23);
  border-radius:.5rem;
 }
 .col-12{
@@ -562,14 +560,14 @@ input.error:focus{
  padding:.75rem 1rem;
  width:auto;
  text-align:center;
- transition:box-shadow .15s ease-out,background .15s ease-out
+ transition:box-shadow .1s ease-out,background .1s ease-out
 }
 .btn:disabled,button:disabled{
  opacity:.85;
  cursor:not-allowed
 }
 .btn:focus,button:focus,.btn:hover,button:hover{
- box-shadow:0 0 .0625rem .0625rem rgba(0,0,0,.15);
+ box-shadow:0 .125rem .25rem rgba(0,0,0,0.19),0 .25rem .375rem rgba(0,0,0,0.23);
  outline:0;
  border:none;
  transition:box-shadow .1s ease-in,background .1s ease-in;
@@ -686,12 +684,9 @@ a.btn:hover{
  background:transparent;
  color:inherit
 }
-.clear.btn{
- color:inherit
-}
 .clear.btn:focus,.clear.btn:hover{
  background:transparent;
- transform:scale(1.05);
+ transform:scale(1.1);
  box-shadow:none;
 }
 .danger{
