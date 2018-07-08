@@ -3,6 +3,10 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.4: 
+* Changed box-sizing:inherit to box-sizing:border-box on *
+* Use of system fonts as default font
+* Changed box-shadows
 
 Changes in 0.3:
 
