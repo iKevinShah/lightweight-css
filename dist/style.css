@@ -11,7 +11,7 @@ table{border-collapse:collapse;border-spacing:0}
 button,input{overflow:visible}
 button,select{text-transform:none}
 
-/* Lightweight CSS 0.4.0 */
+/* Lightweight CSS 0.4.1 */
 *,*:before,*:after{
  box-sizing:border-box
 }
@@ -356,6 +356,7 @@ blockquote cite:before{
 /* Pagination */
 ul.pagination{
  display:flex;
+ flex-flow:row wrap;
  list-style-type:none;
  margin:0 0 .625rem;
  line-height:3
