@@ -3,6 +3,11 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.4.2: 
+* Changes in css reset.
+* Changed default font.
+* Page Structure: page -> container -> row -> cols for grids. 
+
 Changes in 0.4: 
 * Changed box-sizing:inherit to box-sizing:border-box on *
 * Use of system fonts as default font
