@@ -213,7 +213,7 @@ code,kbd,pre,samp,.codely{
  font-size:100%
 }
 pre{
- overflow:auto;  
+ overflow:auto;
  overflow-y:hidden
 }
 code{
@@ -353,7 +353,7 @@ hr{
  transition:background .15s ease-out;
 }
 .nav-link > a:hover{
- background:rgba(255,255,255,.5);
+ background:rgba(255,255,255,.25);
  transition:background .15s ease-in;
  text-decoration:none
 }
@@ -417,15 +417,15 @@ table thead{
 th,td {
  word-wrap:break-word
 }
-table tbody tr:hover{
- background:#eceff1
-}
 table th,table td{
  border-bottom:.0625rem solid #ceced2;
  padding:1rem
 }
 .table-striped tbody tr:nth-of-type(odd){
  background:#fafafa
+}
+table tbody tr:hover,.table-striped tbody tr:nth-of-type(odd):hover{
+ background:rgba(0,0,0,.25)
 }
 /* Blockquote */
 blockquote{
@@ -530,7 +530,7 @@ fieldset{
 }
 legend{
  padding:.625rem;
- margin-left:.625rem  
+ margin-left:.625rem
 }
 label{
  cursor:pointer
@@ -658,14 +658,6 @@ input.error:focus{
  text-align:center;
  transition:all 150ms ease-in
 }
-@media screen and (max-width:768px){
- .btn, button{
-  padding:1rem 1rem;
-  font-size:1rem;
-  min-height:3rem
- }
-}
-
 .btn:disabled,button:disabled{
  opacity:.85;
  cursor:not-allowed
@@ -782,7 +774,7 @@ a.btn:hover{
 }
 /* colors */
 .btn:focus,.btn:hover{
- background:#a4a4a8
+ background:rgba(0,0,0,.25)
 }
 .clear{
  background:transparent;
@@ -815,16 +807,16 @@ a.btn:hover{
   background:#3291ff
 }
 .info{
- background:#07aefb
+ background:#97d5e0
 }
 .info.btn:focus,.info.btn:hover{
-  background:#38befb
+  background:#70c5d4
 }
 .warning{
- background:#ff9600
+ background:#f88259
 }
 .warning.btn:focus,.warning.btn:hover{
-  background:#ffab32
+  background:#f65d28
 }
 .note,.highlight{
  background:#ffed76

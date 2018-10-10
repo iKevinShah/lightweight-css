@@ -3,6 +3,10 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.4.3: 
+* Some color changes.
+* Removed media query for .btn
+
 Changes in 0.4.2: 
 * Changes in css reset.
 * Changed default font.
