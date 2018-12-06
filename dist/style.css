@@ -293,7 +293,7 @@ pre{
 }
 
 code{
-    white-space:pre;
+    white-space:nowrap;
     padding:.125rem .25rem;
     margin:0 .25rem;
     background:rgba(224, 224, 224, .1);
