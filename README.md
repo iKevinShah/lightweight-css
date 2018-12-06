@@ -3,6 +3,11 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.4.5: 
+* Change in page structure.Now .page holds everything.
+* .page is flex-based now.
+*  The three mandatory children of .page are nav, main and footer
+
 Changes in 0.4.3: 
 * Some color changes.
 * Removed media query for .btn
