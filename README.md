@@ -3,6 +3,10 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.5: 
+* Removal of extra class and hierarchy
+* Moving towards HTML5 Semantic elements slowly
+
 Changes in 0.4.5: 
 * Change in page structure.Now .page holds everything.
 * .page is flex-based now.
