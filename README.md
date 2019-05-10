@@ -3,6 +3,10 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.6: 
+* Fixed IE (10+). Grids in IE use float and width=X%.
+* Changed color pallete
+
 Changes in 0.5: 
 * Removal of extra class and hierarchy
 * Moving towards HTML5 Semantic elements slowly

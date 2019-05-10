@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lightweight CSS - v0.5</title>
+    <title>Lightweight CSS - v0.6</title>
     <link rel="stylesheet" href="style.css"/>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -28,35 +28,35 @@
         }
 
         .colors .danger{
-            background:linear-gradient(to right bottom, #ff3824 50%, #ff5f4f 50%)
+            background:linear-gradient(to right bottom, #f31 50%, #f75 50%)
         }
 
         .colors .success{
-            background:linear-gradient(to right bottom, #4cd964 50%, #6fe083 50%)
+            background:linear-gradient(to right bottom, #0f0 50%, #4f4 50%)
         }
 
         .colors .primary{
-            background:linear-gradient(to right bottom, #0076ff 50%, #3291ff 50%)
+            background:linear-gradient(to right bottom, #07f 50%, #49f 50%)
         }
 
         .colors .info{
-            background:linear-gradient(to right bottom, #97d5e0 50%, #70c5d4 50%)
+            background:linear-gradient(to right bottom, #089 50%, #4ab 50%)
         }
 
         .colors .warning{
-            background:linear-gradient(to right bottom, #f88259 50%, #f65d28 50%)
+                background:linear-gradient(to right bottom, #f60 50%, #f94 50%)
         }
 
         .colors .note{
-            background:linear-gradient(to right bottom, #ffed76 50%, #ffe53b 50%)
+            background:linear-gradient(to right bottom, #fc0 50%, #fd5 50%)
         }
 
         .colors .branding{
-            background:linear-gradient(to right bottom, #5856d6 50%, #7977de 50%)
+            background:linear-gradient(to right bottom, #54e 50%, #87e 50%)
         }
 
         .colors .delight{
-            background:linear-gradient(to right bottom, #ff2d55 50%, #ff5676 50%)
+            background:linear-gradient(to right bottom, #f35 50%, #f78 50%)
         }
     </style>
 </head>
@@ -86,34 +86,23 @@
 
         <div class="container">
             <div class="content">
-                <h2 id="about">About Lightweight CSS - <span class="codely">v0.5</span></h2>
+                <h2 id="about">About Lightweight CSS - <span class="codely">v0.6</span></h2>
                 <p>I am a Consultant by the day and a learning web-dev by the night for some personal pet-projects. I am not that much into designing and stuff I have tried to understand various ready to use frameworks like the Bootstrap, Material Design lite, purecss, skeleton to name a few. Every time except maybe for mincss, every other one provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) and maintaining it for every update that comes up (looking at you Bootstrap).So I have created a baseline css which contains only all basic elements that I am mostly going use and are grouped together so removing them is fairly easier. Making it public in case it might be of help to anyone interested.</p>
-                <p>
-                    A note over the font, it uses no pixels (or doesn't set a fixed font size). <span
-                        class="highlight">This is by design</span>, it is to respect user's chosen font-size (Extra
-                    Small / Small / Medium / Large / Extra Large in Chrome and so on).
+                <p><span class="highlight">Note:</span> The font, it uses no pixel values (or doesn't set a fixed font size), <strong>that is by design</strong>. It is to respect user's chosen font-size (For example: Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
                 </p>
             </div>
 
             <div class="content">
                 <h2 id="colors">Color Pallete</h2>
                 <div class="row colors">
-                    <div class="col-1 danger text-center" style="padding:1.25rem;color:#fff;">Danger<br/><strong>#ff3824</strong>
-                    </div>
-                    <div class="col-1 success text-center" style="padding:1.25rem;color:#fff">Success<br/><strong>#49a942</strong>
-                    </div>
-                    <div class="col-1 primary text-center" style="padding:1.25rem;color:#fff">Primary<br/><strong>#0076ff</strong>
-                    </div>
-                    <div class="col-1 info text-center" style="padding:1.25rem;color:#fff">
-                        Info<br/><strong>#97d5e0</strong></div>
-                    <div class="col-1 warning text-center" style="padding:1.25rem;color:#fff">Warning<br/><strong>#ff9600</strong>
-                    </div>
-                    <div class="col-1 note text-center" style="padding:1.25rem;color:#fff">
-                        Note<br/><strong>#ffcd00</strong></div>
-                    <div class="col-1 branding text-center" style="padding:1.25rem;color:#fff">Branding<br/><strong>#5856d6</strong>
-                    </div>
-                    <div class="col-1 delight text-center" style="padding:1.25rem;color:#fff;">Delight<br/><strong>#ff2d55</strong>
-                    </div>
+                    <div class="col-1 danger text-center" style="padding:1.25rem;color:#fff;">Danger</div>
+                    <div class="col-1 success text-center" style="padding:1.25rem;color:#fff">Success</div>
+                    <div class="col-1 primary text-center" style="padding:1.25rem;color:#fff">Primary</div>
+                    <div class="col-1 info text-center" style="padding:1.25rem;color:#fff">Info</div>
+                    <div class="col-1 warning text-center" style="padding:1.25rem;color:#fff">Warning</div>
+                    <div class="col-1 note text-center" style="padding:1.25rem;color:#fff">Note</div>
+                    <div class="col-1 branding text-center" style="padding:1.25rem;color:#fff">Branding</div>
+                    <div class="col-1 delight text-center" style="padding:1.25rem;color:#fff;">Delight</div>
                 </div>
             </div>
 
@@ -173,7 +162,7 @@
             </div>
             <div class="content">
                 <h2 id="grids">Responsive Grids</h2>
-                <p>Use parent class as row i.e. class <code>row</code> and then class <code>col-[1-12]</code>. Here, the number you use takes up that parts from 12 available, col-1 is 1/12th of total width and so on ... till col-12 takes up 100% of the width.<br/> <span class="highlight"><strong>Note:</strong> This is FLEX Based. </span> Also using col-[1-12] will stretch if rest of the row is unused.</p>
+                <p>Use parent class as row i.e. class <code>row</code> and then class <code>col-[1-12]</code>. Here, the number used takes up that parts from 12 available, col-1 is 1/12th of total width and so on ... till col-12 which takes up 100% of the width. If there is any width remaining, the col-[1-12] will stretch till the rest of the width available. <br/> <span class="highlight"><strong>Note:</strong> This is FLEX Based, so this isn't supported on IE9 and below. On IE10, flex based grids do not work. </span> </p>
                 <div class="row grid-demo">
                     <div class="col-1 text-center">
                         col-1
@@ -318,12 +307,11 @@
                 <p>Use class <code>codely</code> for <span class="codely">this console-like font</span>.</p>
                 <p class="big">This is slightly bigger than normal.class <code>big</code></p>
                 <p class="small">This is slightly smaller than normal.class <code>small</code></p>
-                <p>&lt;blockquote&gt;:
-                    <blockquote>
-                <p>The problem with internet quotes is that you cant always depend on their accuracy</p>
-                <cite>Abraham Lincoln, 1864</cite>
+                <span>&lt;blockquote&gt;:</span>
+                <blockquote>
+                    The problem with internet quotes is that you cant always depend on their accuracy
+                    <cite>Abraham Lincoln, 1864</cite>
                 </blockquote>
-                </p>
                 <p>&lt;sub&gt;: This is a <sub>subscript text</sub></p>
                 <p>&lt;p&gt;: This is a normal paragraph: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
                     unknown printer took a galley of type and scrambled it to make a type specimen book. It has
@@ -763,7 +751,7 @@ print('This is some decently long line to see if this line goes out and overflow
                         </div>
                         <div class="input-group">
                             <label for=datetime>Datetime</label>
-                            <input id=datetime type=datetime placeholder='input type="datetime"'/>
+                            <input id=datetime type="datetime" placeholder='input type="datetime"'/>
                         </div>
                         <div class="input-group">
                             <label for=datetime-local>Datetime-local</label>
@@ -837,7 +825,7 @@ print('This is some decently long line to see if this line goes out and overflow
 
                 <p>Example: Default Alignment</p>
                 <ul class="pagination">
-                    <li><a href="#" class="prev">&laquo</a></li>
+                    <li><a href="#" class="prev">&laquo;</a></li>
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
@@ -854,7 +842,7 @@ print('This is some decently long line to see if this line goes out and overflow
                 <p>Use class <code>center</code> and a child list with <code>ul class="pagination</code></p>
                 <div class="center">
                     <ul class="pagination">
-                        <li><a href="#" class="prev">&laquo</a></li>
+                        <li><a href="#" class="prev">&laquo;</a></li>
                         <li><a href="#" class="active">1</a></li>
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
@@ -939,13 +927,6 @@ print('This is some decently long line to see if this line goes out and overflow
                 <p>Adding class <code>noborder</code> would make the element have no border.</p>
                 <p>Adding class <code>nopadding</code> will make the element have 0 padding.
                 <p>Adding class <code>nomargin</code> will make the element have 0 margin.</p>
-                <p class="nomargin" style="border:1px solid #ddd;padding:1.25rem">Example: This paragraph has no
-                    margin
-                    (in lightweight css, paragraph's have bottom margin unless its the last paragraph).</p>
-                <p>Adding class <code>margin2rem</code> would make the element have a 4-sided fixed 2rem margin.
-                </p>
-                <p class="margin2rem" style="border:1px solid #ddd;padding:1.25rem">Example: This paragraph has no
-                    margin (in lightweight css, paragraph's have bottom margin unless its the last paragraph).</p>
             </div>
 
             <div class="content">
