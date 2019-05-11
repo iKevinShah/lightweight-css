@@ -142,8 +142,8 @@ html{
     tab-size:4;
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%;
-    letter-spacing:.0156rem;
-    word-spacing:.0625rem;
+    letter-spacing:.00625rem;
+    word-spacing:.125rem;
     word-break:normal;
     -webkit-font-smoothing:subpixel-antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6{
     color:#333;
     line-height:1.2;
     margin:0 0 1rem;
-    font-weight:600
+    font-weight:500
 }
 
 h1{
