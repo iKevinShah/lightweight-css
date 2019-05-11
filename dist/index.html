@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lightweight CSS - v0.6</title>
+    <title>Lightweight CSS - v0.7</title>
     <link rel="stylesheet" href="style.css"/>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -44,7 +44,7 @@
         }
 
         .colors .warning{
-                background:linear-gradient(to right bottom, #f60 50%, #f94 50%)
+            background:linear-gradient(to right bottom, #f60 50%, #f94 50%)
         }
 
         .colors .note{
@@ -86,14 +86,14 @@
 
         <div class="container">
             <div class="content">
-                <h2 id="about">About Lightweight CSS - <span class="codely">v0.6</span></h2>
-                <p>I am a Consultant by the day and a learning web-dev by the night for some personal pet-projects. I am not that much into designing and stuff I have tried to understand various ready to use frameworks like the Bootstrap, Material Design lite, purecss, skeleton to name a few. Every time except maybe for mincss, every other one provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) and maintaining it for every update that comes up (looking at you Bootstrap).So I have created a baseline css which contains only all basic elements that I am mostly going use and are grouped together so removing them is fairly easier. Making it public in case it might be of help to anyone interested.</p>
+                <h2 id="about">About Lightweight CSS - <span class="code">v0.7</span></h2>
+                <p>I am a Consultant by the day and a rookie web-dev by the night for some personal pet-projects. I have tried various frameworks like the Bootstrap, Material Design, pure css, skeleton and the likes but every one of them provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) <strong>AND</strong> I had to add some components which I wanted and had to add those.This created problems maintaining which each update. So I have created a baseline css which contains only all basic elements that I am mostly going use in my projects. Making it public in case it might be of help to anyone interested.</p>
                 <p><span class="highlight">Note:</span> The font, it uses no pixel values (or doesn't set a fixed font size), <strong>that is by design</strong>. It is to respect user's chosen font-size (For example: Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
                 </p>
             </div>
 
             <div class="content">
-                <h2 id="colors">Color Pallete</h2>
+                <h2 id="colors">Color Palette</h2>
                 <div class="row colors">
                     <div class="col-1 danger text-center" style="padding:1.25rem;color:#fff;">Danger</div>
                     <div class="col-1 success text-center" style="padding:1.25rem;color:#fff">Success</div>
@@ -157,7 +157,7 @@
                     <li>Main</li>
                     <li>Footer</li>
                 </ol>
-                <p>The <code>&lt;nav&gt;</code> part has the navigation (with branding and search as displayed above), the <code>&lt;main&gt;</code> part holds all the webpage content and <code>&lt;footer&gt;</code> has the footer. Pretty self-explanatory there.</p>
+                <p>The <code>&lt;nav&gt;</code> part has the navigation (with branding and search as displayed above), the <code>&lt;main&gt;</code> part holds all the web page content and <code>&lt;footer&gt;</code> has the footer. Pretty self-explanatory there.</p>
                 <p>There is also a class <code>container</code> which holds (contains) the elements so that they don't go out of a certain maximum width, currently set to <strong>1346px</strong>. What this means is, for displays less than 1346px, the width will be 100%, for displays larger than that, the items within container will have width as 1346px and align themselves centrally.</p>
             </div>
             <div class="content">
@@ -304,7 +304,7 @@
                 <h5>Heading 5</h5>
                 <h6>Heading 6</h6>
                 <br/>
-                <p>Use class <code>codely</code> for <span class="codely">this console-like font</span>.</p>
+                <p>Use class <code>code</code> for <span class="code">this console-like font</span>.</p>
                 <p class="big">This is slightly bigger than normal.class <code>big</code></p>
                 <p class="small">This is slightly smaller than normal.class <code>small</code></p>
                 <span>&lt;blockquote&gt;:</span>
@@ -750,16 +750,12 @@ print('This is some decently long line to see if this line goes out and overflow
                             <input id=month type=month placeholder='input type="month"'/>
                         </div>
                         <div class="input-group">
-                            <label for=datetime>Datetime</label>
-                            <input id=datetime type="datetime" placeholder='input type="datetime"'/>
-                        </div>
-                        <div class="input-group">
                             <label for=datetime-local>Datetime-local</label>
-                            <input id=datetime-local type=datetime-local placeholder='input type="datetime-local"'/>
+                            <input id=datetime-local type="datetime-local" placeholder='input type="datetime-local"'/>
                         </div>
                         <div class="input-group">
                             <label for=range>Range</label>
-                            <input id=range type=range/>
+                            <input id=range type="range" />
                         </div>
                         <div class="input-group">
                             <label for=ranges>Range with steps</label>
@@ -925,8 +921,8 @@ print('This is some decently long line to see if this line goes out and overflow
                 <p>Adding class <code>invisible</code> would make the div invisible.</p>
                 <p>Adding class <code>visible</code> would make the div visible, if it was not already.</p>
                 <p>Adding class <code>noborder</code> would make the element have no border.</p>
-                <p>Adding class <code>nopadding</code> will make the element have 0 padding.
-                <p>Adding class <code>nomargin</code> will make the element have 0 margin.</p>
+                <p>Adding class <code>no-padding</code> will make the element have 0 padding.
+                <p>Adding class <code>no-margin</code> will make the element have 0 margin.</p>
             </div>
 
             <div class="content">
