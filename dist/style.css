@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Lightweight CSS 0.7 */
+/* Lightweight CSS 0.7.2 */
 *, *:before, *:after{
     background-repeat:no-repeat;
     box-sizing:border-box
@@ -173,7 +173,7 @@ html{
 body{
     min-width:320px;
     min-height:480px;
-    background:#f1f5fc;
+    background:#eee;
     color:#555;
 }
 
@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6{
     color:#333;
     line-height:1.2;
     margin:0 0 1rem;
-    font-weight:500
+    font-weight:600
 }
 
 h1{
@@ -372,7 +372,7 @@ h6{
 
 b, strong, .strong{
     color: #333;
-    font-weight:700
+    font-weight:600
 }
 
 em, dfn, .italic{
@@ -651,7 +651,7 @@ ul li, ol li{
 }
 
 dl dt{
-    font-weight:bold
+    font-weight:600
 }
 
 dl dd{
@@ -766,7 +766,7 @@ input[type=radio]:checked + label:before, input[type=checkbox]:checked + label:b
     font-size:1rem;
     text-align:center;
     line-height:1;
-    font-weight:700;
+    font-weight:600;
     box-shadow:0 0 .4rem #fff;
     transition:background .2s ease-in
 }
@@ -797,7 +797,7 @@ input[type=file], input[type=color], input[type=range], input[type=color]:focus,
     height:1.125rem;
     border:none;
     border-radius:.175rem 0 0 .175rem;
-    background:#0f0
+    background:#7c4
 }
 
 input.error{
@@ -904,7 +904,7 @@ a.btn:hover{
     top:.5rem;
     right:1rem;
     font-size:1.5rem;
-    font-weight:bolder;
+    font-weight:700;
     cursor:pointer;
     transition:color .15s ease-in
 }
@@ -1001,11 +1001,11 @@ a.btn:hover{
 }
 
 .success{
-    background:#0f0
+    background:#7c4
 }
 
 .success.btn:focus, .success.btn:hover{
-    background:#4f4
+    background:#9d7
 }
 
 .primary{
@@ -1047,11 +1047,11 @@ a.btn:hover{
 }
 
 .branding{
-    background:#54e
+    background:#87e
 }
 
 .branding.btn:focus, .branding.btn:hover{
-    background:#87e
+    background:#aaf
 }
 
 .delight{

@@ -3,6 +3,9 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.7.2: 
+* Font-weight correction
+
 Changes in 0.7: 
 * Created "system" font-face and use that by default
 * Fixed some of the typos.
