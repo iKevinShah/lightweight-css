@@ -3,6 +3,9 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.7.3: 
+* Nav-search classes added. Size updated
+
 Changes in 0.7.2: 
 * Font-weight correction
 

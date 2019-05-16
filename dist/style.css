@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Lightweight CSS 0.7.2 */
+/* Lightweight CSS 0.7.3 */
 *, *:before, *:after{
     background-repeat:no-repeat;
     box-sizing:border-box
@@ -115,22 +115,22 @@ a, area, button, input, label, select, summary, textarea, [tabindex]{
     font-style: normal;
     font-weight: 400;
     src:local(system-ui),
-        local(-apple-system),
-        local(BlinkMacSystemFont),
-        local('Segoe UI'),
-        local(Roboto),
-        local(Oxygen),
-        local(Ubuntu),
-        local(Cantarell),
-        local('Open Sans'),
-        local('Noto Sans'),
-        local('Fira Sans'),
-        local('Droid Sans'),
-        local('Apple Color Emoji'),
-        local('Segoe UI Emoji'),
-        local('Segoe UI Symbol'),
-        local('Noto Color Emoji'),
-        url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+    local(-apple-system),
+    local(BlinkMacSystemFont),
+    local('Segoe UI'),
+    local(Roboto),
+    local(Oxygen),
+    local(Ubuntu),
+    local(Cantarell),
+    local('Open Sans'),
+    local('Noto Sans'),
+    local('Fira Sans'),
+    local('Droid Sans'),
+    local('Apple Color Emoji'),
+    local('Segoe UI Emoji'),
+    local('Segoe UI Symbol'),
+    local('Noto Color Emoji'),
+    url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
 }
 
 html{
@@ -193,6 +193,7 @@ body{
 }
 
 .page > nav,
+.page > header,
 .page > footer{
     flex:0 0 auto;
     width:100%
@@ -266,7 +267,6 @@ body{
 
 .content{
     flex:1 1 100%;
-    max-width:100%;
     background:#fff;
     padding:1.25rem;
     margin-top:1.25rem;
@@ -381,7 +381,7 @@ em, dfn, .italic{
 
 mark{
     background:#fc0;
-    color:#000
+    color:#333
 }
 
 abbr[title]{
@@ -424,7 +424,7 @@ hr{
 
 nav{
     display:flex;
-    background:#000;
+    background:#333;
     color:#fff;
     height:4rem;
     line-height:4rem
@@ -455,8 +455,43 @@ nav > .container{
 }
 
 .nav-search{
+    display:flex;
+    flex-flow:row nowrap;
+    position:relative;
+    padding:.75rem 1.25rem;
     flex:1 1 auto;
-    padding:0 1.25rem
+}
+
+@media screen and (max-width:640px){
+    .nav-search{
+        display:none
+    }
+}
+.nav-search-box{
+    background:#fff;
+    box-shadow:none;
+    border:.0625rem solid #07f;
+    height:2.5rem;
+    margin:0
+}
+
+.nav-search-box:focus{
+    border-color:#999;
+    box-shadow:0 0 .25rem .0625rem #fff
+}
+
+.nav-search-btn{
+    position:absolute;
+    height:2.5rem;
+    width:3rem;
+    right:1.5rem;
+    background:none;
+    transition:none
+}
+
+.nav-search-btn:focus, .nav-search-btn:hover{
+    box-shadow:none;
+    transform:none
 }
 
 .nav-link{
@@ -496,7 +531,7 @@ ul.breadcrumb > li{
 }
 
 ul.breadcrumb > li > a{
-    color:#000;
+    color:#333;
     text-decoration:none;
     display:inline-block
 }
@@ -603,7 +638,7 @@ ul.pagination li:last-child a{
 }
 
 ul.pagination li a{
-    color:#000;
+    color:#333;
     border:.0625rem solid #ccc;
     border-right:0;
     margin-right:-.0625rem;
@@ -909,7 +944,7 @@ a.btn:hover{
     transition:color .15s ease-in
 }
 .close:hover{
-    color:#000;
+    color:#333;
     transition:color .15s ease-out
 }
 
@@ -1062,44 +1097,6 @@ a.btn:hover{
     background:#f78
 }
 
-/* Search */
-.search{
-    display:flex;
-    flex-flow:row nowrap;
-    position:relative;
-    padding:.75rem 0
-}
-
-.search > input{
-    background:#fff;
-    box-shadow:none;
-    border:.0625rem solid #07f;
-    height:2.5rem;
-    margin:0
-}
-
-.search > input:focus{
-    box-shadow:0 0 .25rem .0625rem #fff
-}
-
-.search > button{
-    position:absolute;
-    height:2.5rem;
-    width:3rem;
-    right:0;
-    background:none;
-    transition:none
-}
-
-.search > button:focus, .search > button:hover{
-    box-shadow:none
-}
-
-@media screen and (max-width:640px){
-    .nav-search{
-        display:none
-    }
-}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     main{
         flex-basis: auto !important;

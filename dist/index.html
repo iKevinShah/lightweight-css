@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lightweight CSS - v0.7.2</title>
+    <title>Lightweight CSS - v0.7.3</title>
     <link rel="stylesheet" href="style.css"/>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -62,31 +62,31 @@
 </head>
 <body>
 <div class="page">
-    <nav class="branding">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="/">
-                    Lightweight CSS
-                </a>
-            </div>
-            <div class="nav-search">
-                <form class="search" name="search" action="" method="GET">
-                    <input type="text" placeholder="What are you looking for? (Just for representational purpose)">
-                    <button type="submit">🔍</button>
+    <header>
+        <nav class="branding">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="/">
+                        Lightweight CSS
+                    </a>
+                </div>
+                <form  name="search" action="" method="GET" class="nav-search">
+                    <input name="nav-search-query" class="nav-search-box" type="text" placeholder="What are you looking for? (Just for representational purpose)">
+                    <button name="nav-search-submit" class="nav-search-btn" type="submit">🔍</button>
                 </form>
+                <div class="nav-link">
+                    <a href="#">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#elements">Elements</a>
+                </div>
             </div>
-            <div class="nav-link">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#elements">Elements</a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <main>
 
         <div class="container">
             <div class="content">
-                <h2 id="about">About Lightweight CSS - <span class="code">v0.7.2</span></h2>
+                <h2 id="about">About Lightweight CSS - <span class="code">v0.7.3</span></h2>
                 <p>I am a Consultant by the day and a rookie web-dev by the night for some personal pet-projects. I have tried various frameworks like the Bootstrap, Material Design, pure css, skeleton and the likes but every one of them provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) <strong>AND</strong> I had to add some components which I wanted and had to add those.This created problems maintaining which each update. So I have created a baseline css which contains only all basic elements that I am mostly going use in my projects. Making it public in case it might be of help to anyone interested.</p>
                 <p><span class="highlight">Note:</span> The font, it uses no pixel values (or doesn't set a fixed font size), <strong>that is by design</strong>. It is to respect user's chosen font-size (For example: Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
                 </p>
@@ -109,7 +109,7 @@
             <div class="content">
                 <h2 id="elements">Elements</h2>
                 <p>
-                    Following are the items included in the css <span class="strong">~4KB minified and gzipped</span>
+                    Following are the items included in the css <span class="strong"> &lt; 5KB minified and gzipped</span>
                 </p>
                 <ol class="v-list">
                     <li><a href="#page">Page Structure</a></li>
