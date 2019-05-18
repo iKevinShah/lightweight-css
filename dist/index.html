@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Lightweight CSS - v0.7.3</title>
+    <title>Lightweight CSS - v0.7.4</title>
     <link rel="stylesheet" href="style.css"/>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -86,7 +86,7 @@
 
         <div class="container">
             <div class="content">
-                <h2 id="about">About Lightweight CSS - <span class="code">v0.7.3</span></h2>
+                <h2 id="about">About Lightweight CSS - <span class="code">v0.7.4</span></h2>
                 <p>I am a Consultant by the day and a rookie web-dev by the night for some personal pet-projects. I have tried various frameworks like the Bootstrap, Material Design, pure css, skeleton and the likes but every one of them provided a lot of elements I did not need and hence had to eventually remove them (for smaller CSS size, optimization and everything around that) <strong>AND</strong> I had to add some components which I wanted and had to add those.This created problems maintaining which each update. So I have created a baseline css which contains only all basic elements that I am mostly going use in my projects. Making it public in case it might be of help to anyone interested.</p>
                 <p><span class="highlight">Note:</span> The font, it uses no pixel values (or doesn't set a fixed font size), <strong>that is by design</strong>. It is to respect user's chosen font-size (For example: Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
                 </p>
@@ -691,7 +691,7 @@ print('This is some decently long line to see if this line goes out and overflow
                         </div>
                         <div class="input-group">
                             <label>Radio Buttons</label>
-                            <div class="no-width">
+                            <div>
                                 <input type="radio" id="gender_male" name="radio_button" value="">
                                 <label for="gender_male">Male</label>
                                 <input type="radio" id="gender_female" name="radio_button" value="">
@@ -702,7 +702,7 @@ print('This is some decently long line to see if this line goes out and overflow
                         </div>
                         <div class="input-group">
                             <label>Checkbox</label>
-                            <div class="no-width">
+                            <div>
                                 <input type="checkbox" id="checkbox_1" name="checkbox_demo" value="">
                                 <label for="checkbox_1">Choice 1</label>
                                 <input type="checkbox" id="checkbox_2" name="checkbox_demo" value="" checked>
@@ -807,8 +807,8 @@ print('This is some decently long line to see if this line goes out and overflow
                                 <button type="button" class="btn clear">Clear</button>
                                 .Use class <code>btn clear</code></p>
                             <p>
-                                <button type="button" class="btn branding btn-full">Big One</button>
-                                .Use class <code>btn btn-full</code></p>
+                                <button type="button" class="btn branding btn-full">Big One</button>Use class <code>btn btn-full</code>
+                            </p>
                         </div>
                     </fieldset>
                 </form>
