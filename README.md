@@ -3,6 +3,10 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.8: 
+* Added dark mode (beta)
+* Changed aesthetics
+
 Changes in 0.7.4: 
 * Removed customised checkbox and radio buttons, using browser defaults instead
 

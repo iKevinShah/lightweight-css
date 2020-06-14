@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Lightweight CSS 0.7.4 */
+/* Lightweight CSS 0.8 */
 *, *:before, *:after{
     background-repeat:no-repeat;
     box-sizing:border-box
@@ -164,17 +164,12 @@ html{
     }
 }
 
-@media screen and (max-width:480px){
-    html{
-        font-size:81.25%
-    }
-}
 
 body{
     min-width:320px;
     min-height:480px;
-    background:#eee;
-    color:#555;
+    background:rgb(245,245,245);
+    color:rgb(58,58,58);
 }
 
 .page{
@@ -186,6 +181,8 @@ body{
 }
 
 .container{
+    display:flex;
+    flex-flow: column nowrap;
     width:100%;
     max-width:1346px;
     margin:0 auto;
@@ -267,12 +264,12 @@ body{
 
 .content{
     flex:1 1 100%;
-    background:#fff;
-    padding:1.25rem;
-    margin-top:1.25rem;
-    border:.0625rem solid #ccc;
-    box-shadow:0 .125rem .375rem #bbb;
-    border-radius:.375rem;
+    background:rgb(255,255,255);
+    padding:1.25rem 1.375rem;
+    margin:1rem 0;
+    border:.0625rem solid rgb(231,231,231);
+    border-radius:.5rem;
+    box-shadow: 0 2rem 1rem -2rem rgb(170, 169, 173);
 }
 
 p{
@@ -302,9 +299,9 @@ pre{
 code{
     padding:.0625rem .5rem;
     margin:0 .25rem;
-    background:#eee;
-    color:#555;
-    border:.0625rem solid #ccc;
+    background:rgb(244, 242, 255);
+    border:.0625rem solid rgb(142, 120, 253);
+    color: rgb(142, 120, 253);
     border-radius:.25rem
 }
 
@@ -312,27 +309,27 @@ pre > code{
     display:block;
     padding:1rem;
     margin:0;
-    border-left: .75rem solid #089;
+    border-left: .75rem solid rgb(90, 200, 250);
     overflow-x:auto
 }
 
 a, a:link{
-    color:#07f;
+    color:rgb(0, 122, 255);
     text-decoration:none
 }
 
 a:visited{
-    color:#54e
+    color:rgb(102,0,153)
 }
 
 a:hover{
-    color:#49f;
+    color:rgb(181,132,205);
     text-decoration:underline
 }
 
 h1, h2, h3, h4, h5, h6{
-    color:#333;
-    line-height:1.2;
+    color:rgb(28,28,30);
+    line-height:1.1;
     margin:0 0 1rem;
     font-weight:600
 }
@@ -371,7 +368,7 @@ h6{
 }
 
 b, strong, .strong{
-    color: #333;
+    color:rgb(28,28,30);
     font-weight:600
 }
 
@@ -380,8 +377,8 @@ em, dfn, .italic{
 }
 
 mark{
-    background:#fc0;
-    color:#333
+    background:rgb(255, 204, 0);
+    color:rgb(28,28,30)
 }
 
 abbr[title]{
@@ -419,13 +416,13 @@ hr{
     border:0;
     margin:.625rem auto;
     height:.0625rem;
-    border-bottom:.0625rem solid #ccc
+    border-bottom:.0625rem solid rgb(204,204,204)
 }
 
 nav{
     display:flex;
-    background:#333;
-    color:#fff;
+    background:rgb(28,28,30);
+    color:rgb(255,255,255);
     height:4rem;
     line-height:4rem
 }
@@ -450,7 +447,7 @@ nav > .container{
 }
 
 .nav-brand a{
-    color:#fff;
+    color:rgb(255,255,255);
     padding:.75rem
 }
 
@@ -467,17 +464,19 @@ nav > .container{
         display:none
     }
 }
+
 .nav-search-box{
-    background:#fff;
-    box-shadow:none;
-    border:.0625rem solid #07f;
+    background:rgba(255,255,255,.95);
+    box-shadow:0 0 .125rem .0625rem rgba(255,255,255,.2);
     height:2.5rem;
-    margin:0
+    margin:0;
+    transition:background .1s ease-out, box-shadow .1s ease-out
 }
 
 .nav-search-box:focus{
-    border-color:#999;
-    box-shadow:0 0 .25rem .0625rem #fff
+    border-color:rgba(255, 255, 255, .25);
+    box-shadow:0 0 .125rem .0625rem rgba(255,255,255);
+    transition:background .1s ease-in, box-shadow .1s ease-in
 }
 
 .nav-search-btn{
@@ -502,26 +501,27 @@ nav > .container{
 
 .nav-link > a{
     display:inline-block;
-    color:#fff;
+    color:rgb(255,255,255);
     padding:0 .5rem;
-    transition:background .15s ease-out;
+    transition:background .1s ease-out;
 }
 
 .nav-link > a:hover{
-    background:rgba(255, 255, 255, .25);
-    transition:background .15s ease-in;
+    background:rgba(255, 255, 255, .8);
+    transition:background .1s ease-in;
     text-decoration:none
 }
 
 footer{
-    border-top:.5rem solid #07f;
-    background:#fff;
+    border-top:.5rem solid rgb(0, 122, 255);
+    background:rgb(255,255,255);
     padding:1rem 0;
     margin-top:1.25rem
 }
 
 /* Breadcrumb */
 ul.breadcrumb{
+    padding:0;
     margin:0
 }
 
@@ -531,17 +531,17 @@ ul.breadcrumb > li{
 }
 
 ul.breadcrumb > li > a{
-    color:#333;
+    color:rgb(28,28,30);
     text-decoration:none;
     display:inline-block
 }
 
 ul.breadcrumb > li:last-child{
-    color:#bbb
+    color:rgb(187,187,187)
 }
 
 ul.breadcrumb > li:not(:last-child)::after{
-    color:#ccc;
+    color:rgb(204,204,204);
     content:" >";
     padding:0 .3125rem
 }
@@ -585,7 +585,7 @@ table{
 
 table thead{
     font-weight:600;
-    border-bottom:.25rem solid #ccc
+    border-bottom:.25rem solid rgb(204,204,204)
 }
 
 th, td{
@@ -593,17 +593,17 @@ th, td{
 }
 
 table th, table td{
-    border-bottom:.0625rem solid #ccc;
+    border-bottom:.0625rem solid rgb(204,204,204);
     padding:1rem
 }
 
 .table-striped tbody tr:nth-of-type(odd){
-    background:#eee
+    background:rgb(238,238,238)
 }
 
 /* Blockquote */
 blockquote{
-    border-left:.6rem solid #ccc;
+    border-left:.6rem solid rgb(204,204,204);
     margin:.75rem 0;
     padding:.625rem
 }
@@ -611,7 +611,7 @@ blockquote{
 blockquote cite{
     margin-top:.5rem;
     display:block;
-    color:#aaa;
+    color:rgb(170,170,170);
     font-style:italic
 }
 
@@ -634,20 +634,20 @@ ul.pagination li:first-child a{
 
 ul.pagination li:last-child a{
     border-radius:0 .25rem .25rem 0;
-    border-right:.0625rem solid #ccc
+    border-right:.0625rem solid rgb(204,204,204)
 }
 
 ul.pagination li a{
-    color:#333;
-    border:.0625rem solid #ccc;
+    color:rgb(28,28,30);
+    border:.0625rem solid rgb(204,204,204);
     border-right:0;
     margin-right:-.0625rem;
     padding:.75rem 1rem
 }
 
 ul.pagination li a.active, ul.pagination li a:hover:not(.active){
-    background-color:#07f;
-    color:#fff;
+    background-color:rgb(0, 122, 255);
+    color:rgb(255,255,255);
     text-decoration:none
 }
 
@@ -721,7 +721,7 @@ dl dd{
 fieldset{
     position:relative;
     margin:.625rem 0;
-    border:.0625rem solid #ccc;
+    border:.0625rem solid rgb(170,170,170);
     border-radius:.3125rem
 }
 
@@ -735,7 +735,7 @@ label{
 }
 
 .input-group{
-    padding:0 1rem 1rem
+    padding:1rem 1rem 0
 }
 
 textarea{
@@ -752,24 +752,26 @@ input, button, option, textarea, select{
 }
 
 input, textarea, select{
-    border:.0625rem solid #ccc;
-    box-shadow:0 0 .25rem #ddd;
+    background: rgb(251,251,251);
+    border:.0625rem solid rgb(204,204,204);
     border-radius:.375rem;
     margin:.25rem 0;
     line-height:1;
     outline:0;
     width:100%;
-    transition:box-shadow .25s ease-out;
+    transition: box-shadow .1s ease-in
 }
 
 input:focus, textarea:focus, select:focus{
-    border:.0625rem solid #07f;
-    box-shadow:0 0 .5rem #07f;
-    transition:box-shadow .25s ease-in;
+    background:rgb(255,255,255);
+    border-color: rgb(0, 122, 255);
+    box-shadow: 0 0 .375rem 0 rgb(90, 200, 250);
+    transition: box-shadow .1s ease-in
 }
 
 input:disabled, textarea:disabled, select:disabled{
-    background:#eee;
+    background:rgb(150,150,150);
+    color:rgb(255,255,255);
     cursor:not-allowed
 }
 
@@ -784,72 +786,69 @@ input[type=file], input[type=color], input[type=range], input[type=color]:focus,
     border:0;
     box-shadow:none
 }
-
-.progress, .progress-bar{
+.progress{
     height:1.25rem;
-    background:#eee;
-    border:.0625rem solid #ccc;
+    background:rgb(238,238,238);
+    border:.0625rem solid rgb(204,204,204);
     border-radius:.25rem;
-    text-align:center
+    text-align:center;
+    margin:-.0625rem
 }
 
 .progress-bar{
     height:1.125rem;
     border:none;
     border-radius:.175rem 0 0 .175rem;
-    background:#7c4
+    background:rgb(52, 199, 89)
 }
 
 input.error{
-    border-bottom-left-radius:0;
-    border-bottom-right-radius:0;
-    border:.0625rem solid #f31;
+    border:.0625rem solid rgb(255, 59, 48);
     margin-bottom:0
 }
 
 input.error:focus{
-    box-shadow:0 0 .125rem 0.0625rem #f75;
+    box-shadow:0 0 .125rem 0.0625rem rgba(255, 59, 48, .5);
 }
 
 .error-text{
     position:relative;
-    background:#f75;
-    color:#fff;
-    border:.0625rem solid #f31;
+    background:rgb(255, 59, 48);
+    color:rgb(255,255,255);
+    border:.0625rem solid rgb(255, 59, 48);
     border-top:0;
     border-bottom-left-radius:.8rem;
     border-bottom-right-radius:.8rem;
     padding:1rem;
-    margin-top:-.1rem
+    margin-top:-.25rem
 }
 
 .btn, button{
     display:inline-block;
     line-height:1;
-    font-size:1rem;
+    font-size:.9375rem;
     cursor:pointer;
     white-space:nowrap;
     border:0;
     border-radius:.25rem;
-    background:#ccc;
-    color:#fff;
+    background:rgb(204,204,204);
+    color:rgb(255,255,255);
     padding:.75rem 1rem;
     width:auto;
     text-align:center;
-    transition:all 150ms ease-in
+    transition:box-shadow .1s ease-in
 }
 
 .btn:disabled, button:disabled{
-    opacity:.85;
+    opacity:.9;
     cursor:not-allowed
 }
 
 .btn:focus, button:focus, .btn:hover, button:hover{
-    box-shadow:0 .125rem .25rem 0.025rem #999;
+    box-shadow:.125rem .25rem 3px -2px rgb(170,170,170);
     outline:0;
     border:none;
-    transition:all 150ms ease-out;
-    transform:translateY(-.0625rem);
+    transition:box-shadow .1s ease-out;
 }
 
 .btn-full{
@@ -859,7 +858,7 @@ input.error:focus{
 }
 
 a.btn{
-    color:#fff
+    color:rgb(255,255,255)
 }
 
 a.btn:hover{
@@ -868,33 +867,32 @@ a.btn:hover{
 
 /* Extras */
 .badge{
-    display:inline;
-    background:#f31;
-    color:#fff;
-    border-radius:1rem;
-    font-size:.75rem;
-    min-width:1.5rem;
-    padding:.25rem .5rem;
-    text-align:center;
-    white-space:nowrap;
-    margin-left:.5rem
+    display: inline;
+    background: rgb(255, 59, 48);
+    color: rgb(255,255,255);
+    border-radius: 1rem;
+    font-size: .75rem;
+    min-width: 1.5rem;
+    padding: .125rem .5rem;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: .5rem
 }
 
 .label{
     display:inline;
-    line-height:2.5;
     padding:.5rem 1rem;
     font-size:93%;
-    background:#ccc;
-    color:#fff;
+    background:rgb(204,204,204);
+    color:rgb(255,255,255);
     white-space:nowrap;
     border-radius:.25rem
 }
 
 .alert{
     position:relative;
-    background:#ccc;
-    color:#fff;
+    background:rgb(204,204,204);
+    color:rgb(255,255,255);
     border-radius:.375rem;
     padding:1rem 1.5rem;
     margin-bottom:1rem
@@ -907,11 +905,11 @@ a.btn:hover{
     font-size:1.5rem;
     font-weight:700;
     cursor:pointer;
-    transition:color .15s ease-in
+    transition:color .1s ease-out
 }
 .close:hover{
-    color:#333;
-    transition:color .15s ease-out
+    color:rgb(28,28,30);
+    transition:color .1s ease-in
 }
 
 .text-left{
@@ -935,15 +933,15 @@ a.btn:hover{
 }
 
 .text-light{
-    color:#666
+    color:rgb(142,142,142)
 }
 
 .text-lighter{
-    color:#999
+    color:rgb(199,199,204)
 }
 
 .text-lightest{
-    color:#ccc
+    color:rgb(229,229,234)
 }
 
 .fullscreen{
@@ -973,97 +971,6 @@ a.btn:hover{
 
 .no-padding{
     padding:0
-}
-
-/* colors */
-.btn:focus, .btn:hover{
-    background:#ddd
-}
-
-.clear{
-    background:transparent;
-    color:inherit
-}
-
-.clear.btn{
-    color:inherit
-}
-
-.clear.btn:focus, .clear.btn:hover{
-    background:transparent;
-    box-shadow:none;
-    border:none;
-    transform: none
-}
-
-.danger{
-    background:#f31
-}
-
-.danger.btn:focus, .danger.btn:hover{
-    background:#f75
-}
-
-.success{
-    background:#7c4
-}
-
-.success.btn:focus, .success.btn:hover{
-    background:#9d7
-}
-
-.primary{
-    background:#07f
-}
-
-.primary.btn:focus, .primary.btn:hover{
-    background:#49f
-}
-
-.info{
-    background:#089
-}
-
-.info.btn:focus, .info.btn:hover{
-    background:#4ab
-}
-
-.warning{
-    background:#f60
-}
-
-.warning.btn:focus, .warning.btn:hover{
-    background:#f94
-}
-
-.note, .highlight{
-    background:#fc0
-}
-
-.note.btn:focus, .note.btn:hover{
-    background:#fd5
-}
-
-.highlight{
-    padding:.25rem;
-    margin:0 .25rem;
-    border-radius:.25rem;
-}
-
-.branding{
-    background:#87e
-}
-
-.branding.btn:focus, .branding.btn:hover{
-    background:#aaf
-}
-
-.delight{
-    background:#f35
-}
-
-.delight.btn:focus, .delight.btn:hover{
-    background:#f78
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -1128,11 +1035,223 @@ a.btn:hover{
     .col-1{
         width:8.33%
     }
-
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width:768px){
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
         width:100%
     }
+}
+@media screen and (prefers-color-scheme: dark) {
+
+    body{
+        background:rgb(29,29,29);
+        color:rgb(229,229,229);
+    }
+    h1, h2, h3, h4, h5, h6, b, strong, .strong, ul.breadcrumb > li > a{
+        color:rgb(242,242,242);
+    }
+        
+    code{
+        background:rgb(36,36,36);
+        color:rgb(209,209,214);
+        border-color: rgb(0, 59, 0);
+    }
+
+    img {
+        filter: grayscale(30%);
+    }
+
+    a, a:link{
+        color:rgb(107,169,239)
+    }
+
+    a:visited{
+        color:rgb(163,102,193)
+    }
+
+    a:hover{
+        color:rgb(207,227,249)
+    }
+
+    .content{
+        background:rgb(52,52,52);
+        border-color:rgb(99,99,99)
+    }
+    nav{
+        background:rgb(99,99,99)
+    }
+    .nav-brand a, .nav-link > a, blockquote cite{
+        color:rgb(255,255,255)
+    }  
+
+    .nav-search-box{
+        background:rgba(255,255,255,.15);
+        border-color:rgba(255,255,255,.2);
+        box-shadow:none;
+    }
+
+    .nav-search-box:focus{
+        background:rgba(255,255,255,.35);
+        box-shadow:0 0 .125rem .0625rem rgba(255,255,255,.2);
+    }
+    .nav-link > a:hover{
+        background:rgba(255, 255, 255, .1)
+    }
+    table thead, table th, table td{
+        border-bottom-color:rgb(72,72,72)
+    }
+
+    .table-striped tbody tr:nth-of-type(odd){
+        background:rgb(35,35,35)
+    }
+
+    ul.pagination li a, ul.pagination li:last-child a{
+        color:rgb(204,204,204);
+        background: rgb(70,70,70);
+        border-color:rgb(30,30,30)
+    }
+    .progress, .label{
+        background:rgb(25,25,25);
+    }
+
+    input, textarea, select{
+        background: rgb(75,75,75);
+        border-color:rgb(40,40,40);
+        color:rgb(240,240,240)
+    }
+
+    input:focus, textarea:focus, select:focus{
+        background:rgb(100,100,100);
+        border-color: rgb(20,20,20);
+        box-shadow: 0 0 .375rem 0 rgb(125,125,125);
+        color:rgb(255,255,255)
+    }
+
+    input:disabled, textarea:disabled, select:disabled{
+        background:rgb(150,150,150);
+        color:rgb(255,255,255);
+    }
+
+    .btn, button{
+        background:rgb(25,25,25);
+        color:rgb(255,255,255);
+    }
+    .btn:focus, .btn:hover{
+        background:rgb(50,50,50);
+    }
+
+    .btn:focus, button:focus, .btn:hover, button:hover{
+        box-shadow: 0 0.0625rem .25rem 0.125rem rgb(72,72,72);
+    }
+
+    a.btn{
+        color:rgb(255,255,255)
+    }
+
+    .alert{
+        background:rgb(25,25,25);
+        color:rgb(255,255,255);
+    }
+
+    footer{
+        background:rgb(57,57,57)
+    }
+
+    .progress{
+        border-color:rgb(80,80,80)
+    }
+}
+
+/* colors */
+.btn:focus, .btn:hover{
+    background:rgb(170,170,170)
+}
+
+.clear{
+    background:transparent;
+    color:inherit
+}
+
+.clear.btn{
+    color:inherit
+}
+
+.clear.btn:focus, .clear.btn:hover{
+    background:transparent;
+    box-shadow:none;
+    outline:0;
+    border:none;
+    text-decoration: underline
+}
+
+.danger{
+    background: rgb(255,51,17)
+}
+
+.danger.btn:focus, .danger.btn:hover{
+    background:rgba(255,51,17,.85)
+}
+
+.success{
+    background: rgb(52,199,89)
+}
+
+.success.btn:focus, .success.btn:hover{
+    background:rgba(52,199,89,.85)
+}
+
+.primary{
+    background:rgb(0, 122, 255)
+}
+
+.primary.btn:focus, .primary.btn:hover{
+    background:rgba(0, 122, 255,.85)
+}
+
+.info{
+    background:rgb(0,136,153)
+}
+
+.info.btn:focus, .info.btn:hover{
+    background:rgba(0,136,153,.85)
+}
+
+.warning{
+    background:rgb(255, 149, 0)
+}
+
+.warning.btn:focus, .warning.btn:hover{
+    background:rgba(255, 149, 0,.85)
+}
+
+.note, .highlight{
+    background:rgb(255, 204, 0)
+}
+
+.note.btn:focus, .note.btn:hover{
+    background:rgba(255, 204, 0,.85)
+}
+
+.highlight{
+    color:rgb(0,0,0);
+    padding:.25rem;
+    margin:0 .25rem;
+    border-radius:.25rem;
+}
+
+.branding{
+    background:rgb(162,110,234)
+}
+
+.branding.btn:focus, .branding.btn:hover{
+    background:rgba(162,110,234,.85);
+}
+
+.delight{
+    background:rgb(255,51,85);
+}
+
+.delight.btn:focus, .delight.btn:hover{
+    background:rgba(255,51,85,.85);
 }
