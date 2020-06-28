@@ -4,6 +4,13 @@ Lightweight CSS - Ready to be used in projects.
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
 Changes in 0.8: 
+* Added '.night', moved away from css auto-detect dark mode
+* Removed 'success', 'danger' like classes and added 'secondary','complementary' colors"
+* Added 'btn-group'
+* Pagination now aligns to center as the default (thats how I use them :/)
+* Changed 'hide' and 'show' from modifying display to modifying opacity & pointer-events (Hiding in plainsight)
+
+Changes in 0.8: 
 * Added dark mode (beta)
 * Changed aesthetics
 
