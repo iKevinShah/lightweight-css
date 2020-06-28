@@ -4,75 +4,50 @@
 <head>
     <title>Lightweight CSS - v0.8</title>
     <link rel="stylesheet" href="style.css" />
+    <!--[if IE]>
+        <style>
+            body{
+                display:none !important
+            }
+        </style>
+    <![endif]-->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <style>
+        nav.branding{
+            background-color: #af82ed;
+            background-image:linear-gradient(to bottom , #af82ed, #a26eea)
+        }
         .grid-demo {
-            margin:0 0 1rem 0;
+            margin: 0 0 1rem 0;
             padding: 0
         }
 
         .grid-demo>div {
             background: #caccd1;
             border: .0625rem solid #eee;
-            border-radius: .5rem;
+            border-radius: .375rem;
             text-align: center;
             padding: 1rem
         }
 
-        @media screen and (prefers-color-scheme: dark) {
-            .grid-demo>div {
-                background: rgb(100,100,100);
-                border: .0625rem solid rgb(10,10,10);
-            }
+        .night .grid-demo > div {
+            background: rgb(100, 100, 100);
+            border: .0625rem solid rgb(10, 10, 10);
         }
 
         @media screen and (max-width:768px) {
-            .colors .col-1 {
+            .colors .col-3 {
                 margin-bottom: 1rem;
                 border-radius: .5rem
             }
         }
 
-        .colors .danger {
-            background: linear-gradient(to right bottom,rgb(255,51,17) 50%, rgba(255,51,17, .85) 50%);
-            border: .0625rem solid rgb(255,51,17);
-        }
-
-        .colors .success {
-            background: linear-gradient(to right bottom, rgb(52, 199, 89) 50%, rgba(52, 199, 89, .85) 50%);
-            border: .0625rem solid rgb(52, 199, 89);
-        }
- 
-        .colors .primary {
-            background: linear-gradient(to right bottom, rgb(0, 122, 255) 50%, rgba(0, 122, 255, .85) 50%);
-            border: .0625rem solid rgb(0, 122, 255);
-        }
-
-        .colors .info {
-            background: linear-gradient(to right bottom, rgb(0,136,153) 50%, rgba(0,136,153, .85) 50%);
-            border: .0625rem solid rgb(0,136,153);
-        }
-
-        .colors .warning {
-            background: linear-gradient(to right bottom, rgb(255, 149, 0) 50%, rgba(255, 149, 0, .85) 50%);
-            border: .0625rem solid rgb(255, 149, 0);
-        }
-
-        .colors .note {
-            background: linear-gradient(to right bottom, rgb(255, 204, 0) 50%, rgba(255, 204, 0, .85) 50%);
-            border: .0625rem solid rgb(255, 204, 0);
-        }
-
-        .colors .branding {
-            background: linear-gradient(to right bottom, rgb(162,110,234) 50%, rgba(162,110,234, .85) 50%);
-            border: .0625rem solid rgb(162,110,234);
-        }
-
-        .colors .delight {
-            background: linear-gradient(to right bottom, rgb(255, 45, 85) 50%, rgba(255, 45, 85, .85) 50%);
-            border: .0625rem solid rgb(255, 45, 85);
+        @media screen and (max-width:640px) {
+            .nav-search {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -83,9 +58,7 @@
             <nav class="branding">
                 <div class="container">
                     <div class="nav-brand">
-                        <a href="/">
-                            Lightweight CSS
-                        </a>
+                        Lightweight CSS
                     </div>
                     <form name="search" action="" method="GET" class="nav-search">
                         <input name="nav-search-query" class="nav-search-box" type="text"
@@ -93,7 +66,7 @@
                         <button name="nav-search-submit" class="nav-search-btn" type="submit">🔍</button>
                     </form>
                     <div class="nav-link">
-                        <a href="#">Home</a>
+                        <a href="index.html">Home</a>
                         <a href="#about">About</a>
                         <a href="#elements">Elements</a>
                     </div>
@@ -121,14 +94,10 @@
                 <div class="content">
                     <h2 id="colors">Color Palette</h2>
                     <div class="row colors">
-                        <div class="col-1 danger text-center" style="padding:1.25rem;color:#fff;">Danger</div>
-                        <div class="col-1 success text-center" style="padding:1.25rem;color:#fff">Success</div>
-                        <div class="col-1 primary text-center" style="padding:1.25rem;color:#fff">Primary</div>
-                        <div class="col-1 info text-center" style="padding:1.25rem;color:#fff">Info</div>
-                        <div class="col-1 warning text-center" style="padding:1.25rem;color:#fff">Warning</div>
-                        <div class="col-1 note text-center" style="padding:1.25rem;color:#fff">Note</div>
-                        <div class="col-1 branding text-center" style="padding:1.25rem;color:#fff">Branding</div>
-                        <div class="col-1 delight text-center" style="padding:1.25rem;color:#fff;">Delight</div>
+                        <div class="col-3 primary text-center" style="padding:1.25rem;color:#fff;">Primary</div>
+                        <div class="col-3 complementary text-center" style="padding:1.25rem;color:#fff">Complementary</div>
+                        <div class="col-3 secondary text-center" style="padding:1.25rem;color:#fff">Secondary</div>
+                        <div class="col-3 tertiary text-center" style="padding:1.25rem;color:#fff">Tertiary</div>
                     </div>
                 </div>
 
@@ -316,9 +285,7 @@
                     <p>The navbar comes by default in black, easily can be changed with background-color in css. Here's
                         a demo nav.</p>
                     <nav style="min-width:unset">
-                        <div class="nav-brand">
-                            <a href="#">My Startup</a>
-                        </div>
+                        <div class="nav-brand">My Startup</div>
                         <div class="nav-link">
                             <a href="#">Link 1</a>
                             <a href="#">Link 2</a>
@@ -336,7 +303,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Category</a></li>
                         <li><a href="#">Sub category</a></li>
-                        <li class="active"><em>This page</em></li>
+                        <li class="active">This page</li>
                     </ul>
                 </div>
                 <div class="content">
@@ -511,7 +478,7 @@ print('This is some decently long line to see if this line goes out and overflow
                 <div class="content">
                     <h2 id="lists">Lists</h2>
                     <div class="row">
-                        <div class="col col-6">
+                        <div class="col-6">
                             <h3>Lists & Nested lists</h3>
                             <ol>
                                 <li>This is a nice list</li>
@@ -526,7 +493,7 @@ print('This is some decently long line to see if this line goes out and overflow
                                 <li>Last list item!</li>
                             </ol>
                         </div>
-                        <div class="col col-6">
+                        <div class="col-6">
                             <h3>Description Lists</h3>
                             <dl lang="en">
                                 <dt>description list term 1</dt>
@@ -545,7 +512,7 @@ print('This is some decently long line to see if this line goes out and overflow
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col col-6">
+                        <div class="col-6">
                             <h3> Horizontal Lists</h3>
                             <p>Use class <code>h-list</code> for creating horizontal lists</p>
                             <ul class="h-list">
@@ -557,7 +524,7 @@ print('This is some decently long line to see if this line goes out and overflow
                             </ul>
                         </div>
 
-                        <div class="col col-6">
+                        <div class="col-6">
                             <h3> Vertical Lists</h3>
                             <p>Use class <code>v-list</code> for creating vertical lists</p>
                             <ul class="v-list">
@@ -698,7 +665,6 @@ print('This is some decently long line to see if this line goes out and overflow
                 </div>
                 <div class="content">
                     <h2 id="form">Form Elements</h2>
-                    <p>I would say this is still a work-in-progress but here we are ...</p>
                     <form name="demo" method="post" action="#">
                         <fieldset>
                             <legend>Form Elements</legend>
@@ -720,7 +686,7 @@ print('This is some decently long line to see if this line goes out and overflow
                                 <input id=password_with_error type=password class="error"
                                     placeholder='input with an error' autocomplete="new-password" />
                                 <div class="error-text">This is an error<span class="close"
-                                        onclick="this.parentElement.style.display='none';">&times;</span>
+                                        onclick="this.parentElement.style.opacity=0;this.parentElement.style.transition='opacity 300ms ease-in'">&times;</span>
                                 </div>
                             </div>
                             <div class="input-group">
@@ -741,7 +707,7 @@ print('This is some decently long line to see if this line goes out and overflow
                             </div>
                             <div class="input-group">
                                 <label for=search>Search (read only)</label>
-                                <input id=search type=search placeholder='This field is readonly' readonly />
+                                <input readonly id=search type=search placeholder='This field is readonly' />
                             </div>
                             <div class="input-group">
                                 <label>Radio Buttons</label>
@@ -809,14 +775,6 @@ print('This is some decently long line to see if this line goes out and overflow
                                     placeholder='input type="datetime-local"' />
                             </div>
                             <div class="input-group">
-                                <label for=range>Range</label>
-                                <input id=range type="range" />
-                            </div>
-                            <div class="input-group">
-                                <label for=ranges>Range with steps</label>
-                                <input id=ranges type=range min=0 max=15 step=3 />
-                            </div>
-                            <div class="input-group">
                                 <h2 id="progressbar">Progress Bar</h2>
                                 <p>Use class <code>progress</code> and then a child div with
                                     class <code>progress-bar</code> and provide width: <code>style="width:X%</code></p>
@@ -824,46 +782,53 @@ print('This is some decently long line to see if this line goes out and overflow
                                     <div class="progress-bar" style="width:74%;"></div>
                                 </div>
                             </div>
-                            <div class="row input-group">
-                                <div class="col-4"><input type="submit" class="btn success" value="Submit" /></div>
-                                <div class="col-4"><input type="reset" class="btn info" value="Reset" /></div>
-                                <div class="col-4"><a class="btn danger" href="#">Cancel</a></div>
+                            <div class="btn-group">
+                                <input type="submit" class="btn success" value="Submit" />
+                                <input type="reset" class="btn info" value="Reset" />
+                                <a class="btn danger" href="#">Cancel</a>
                             </div>
                             <div class="row input-group">
                                 <p>Some Buttons</p>
                                 <p>
                                     <button type="button" class="btn">Default Button</button>
-                                    .Use class <code>btn</code></p>
+                                    .Use class <code>btn</code>
+                                </p>
                                 <p>
-                                    <button type="button" class="btn primary">Primary</button>
-                                    .Use class <code>btn primary</code></p>
+                                    <button type="button" class="btn primary">Primary Button</button>
+                                    .Use class <code>btn primary</code>
+                                </p>
                                 <p>
-                                    <button type="button" class="btn info">Info</button>
-                                    .Use class <code>btn info</code></p>
+                                    <button type="button" class="btn secondary">Secondary Button</button>
+                                    .Use class <code>btn secondary</code>
+                                </p>
                                 <p>
-                                    <button type="button" class="btn note">Note</button>
-                                    .Use class <code>btn note</code></p>
+                                    <button type="button" class="btn tertiary">Tertiary Button</button>
+                                    .Use class <code>btn tertiary</code>
+                                </p>
                                 <p>
-                                    <button type="button" class="btn danger">Danger</button>
-                                    .Use class <code>btn danger</code></p>
+                                    <button type="button" class="btn complementary">Complementary Button</button>
+                                    .Use class <code>btn complementary</code>
+                                </p>
                                 <p>
-                                    <button type="button" class="btn warning">Warning</button>
-                                    .Use class <code>btn warning</code></p>
+                                    <button type="button" class="btn clear">Clear Button</button>
+                                    .Use class <code>btn clear</code>
+                                </p>
                                 <p>
-                                    <button type="button" class="btn success">Success</button>
-                                    .Use class <code>btn success</code></p>
-                                <p>
-                                    <button type="button" class="btn branding">Branding</button>
-                                    .Use class <code>btn success</code></p>
-                                <p>
-                                    <button type="button" class="btn delight">Delightful</button>
-                                    .Use class <code>btn success</code></p>
-                                <p>
-                                    <button type="button" class="btn clear">Clear</button>
-                                    .Use class <code>btn clear</code></p>
-                                <p>
-                                    <button type="button" class="btn branding btn-full">Big One</button>Use class
+                                    <button type="button" class="btn primary btn-full">Big One</button>Use class
                                     <code>btn btn-full</code>
+                                </p>
+                                <p>
+                                    Button Group, a group of buttons together. Use class <code>btn-group</code>
+                                    <div class="btn-group">
+                                        <a class="btn clear" href="#">G</a>
+                                        <a class="btn clear" href="#">o</a>
+                                        <a class="btn clear" href="#">o</a>
+                                        <a class="btn clear" href="#">o</a>
+                                        <a class="btn clear" href="#">o</a>
+                                        <a class="btn clear" href="#">g</a>
+                                        <a class="btn clear" href="#">l</a>
+                                        <a class="btn clear" href="#">e</a>
+                                    </div>
                                 </p>
                             </div>
                         </fieldset>
@@ -871,7 +836,8 @@ print('This is some decently long line to see if this line goes out and overflow
                 </div>
                 <div class="content">
                     <h2 id="pagination">Pagination</h2>
-                    <p>Use class <code>pagination</code> for any list to be used for pagination. Also you use pagination with-in text-left/right/center <span class="highlight">for aligning the pagination</span> accordingly.</p>
+                    <p>Use class <code>pagination</code> for any list to be used for pagination. Note that it will align
+                        at the center by default.</p>
                     <ul class="pagination">
                         <li><a href="#" class="prev">&laquo;</a></li>
                         <li><a href="#">1</a></li>
@@ -899,41 +865,35 @@ print('This is some decently long line to see if this line goes out and overflow
                 </div>
                 <div class="content">
                     <h2 id="label">Label</h2>
-                    <p>Use class <code>label</code> for creating a label. Add primary / danger / success / warning for different flavors.</p>
+                    <p>Use class <code>label</code> for creating a label. Add primary / secondary / tertiary /
+                        complementary for different colored label.</p>
                     <p>
-                        <span class="label danger">Danger</span>
-                        <span class="label success">Success</span>
+                        <span class="label">Default</span>
                         <span class="label primary">Primary</span>
-                        <span class="label info">Info</span>
-                        <span class="label warning">Warning</span>
-                        <span class="label note">Note</span>
-                        <span class="label delight">Delight</span>
+                        <span class="label secondary">Secondary</span>
+                        <span class="label tertiary">Tertiary</span>
+                        <span class="label complementary">Complementary</span>
                     </p>
                 </div>
                 <div class="content">
                     <h2 id="alert">Alert</h2>
-                    <p>Use class <code>alert</code> for creating a label. Add primary / danger / success / warning for
-                        different flavors. </p>
-                    <div class="alert">Default alert with class <code>alert</code><span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
-                    </div>
-                    <div class="alert danger">Dangerous alert with class <code>alert danger</code> for dangerous alert<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
-                    <div class="alert success">Success alert with class <code>alert success</code> for successful
-                        alert<span class="close" onclick="this.parentElement.style.display='none';">&times;</span></div>
-                    <div class="alert primary">Primary alert with class <code>alert primary</code> for some
-                        alerts<span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
-                    </div>
-                    <div class="alert info">Info alert with class <code>alert info</code><span class="close"
+                    <p>Use class <code>alert</code> for creating an alert. Add primary / secondary / tertiary /
+                        complementary for different colored alert.</p>
+                    <div class="alert">Default alert with class <code>alert</code><span class="close"
                             onclick="this.parentElement.style.display='none';">&times;</span>
                     </div>
-                    <div class="alert warning">Warning alert with class <code>alert warning</code><span class="close"
+                    <div class="alert primary">Primary alert with class <code>alert primary</code><span class="close"
                             onclick="this.parentElement.style.display='none';">&times;</span>
                     </div>
-                    <div class="alert note">Note alert with class <code>alert note</code><span class="close"
+                    <div class="alert secondary">Secondary alert with class <code>alert secondary</code> <span
+                            class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+                    </div>
+                    <div class="alert tertiary">Tertiary alert with class <code>alert tertiary</code><span class="close"
                             onclick="this.parentElement.style.display='none';">&times;</span>
                     </div>
-                    <div class="alert delight">Hurray! You have a delightful message! class
-                        <code>alert delight</code>.<span class="close"
-                            onclick="this.parentElement.style.display='none';">&times;</span></div>
+                    <div class="alert complementary">Complementary alert with class <code>alert complementary</code><span
+                            class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+                    </div>
                 </div>
                 <div class="content">
                     <h2 id="fullscreen">Fullscreen div</h2>
@@ -945,11 +905,12 @@ print('This is some decently long line to see if this line goes out and overflow
                 <div class="content">
                     <h2 id="hide-show">Hide / Show / Misc classes</h2>
                     <p>3 Classes which would help when eventually further stuff is added like Dropdowns / Toggles /
-                        etc.<br />Please
-                        note that there is a difference with setting the display to none vs setting visibility to
-                        hidden.</p>
-                    <p>Adding class <code>hide</code> would hide the div (sets the div's display to none)</p>
-                    <p>Adding class <code>show</code> would show the div (sets the div's display to block)</p>
+                        etc.<br />
+                        <span class="highlight">Please note that the hide / show classes change the opacity &
+                            pointer-events of the elements on
+                            which they're being used and not the <span class="code">display</span> property.</span>
+                    <p>Adding class <code>hide</code> would hide the div</p>
+                    <p>Adding class <code>show</code> would show the div</p>
                     <p>Adding class <code>invisible</code> would make the div invisible.</p>
                     <p>Adding class <code>visible</code> would make the div visible, if it was not already.</p>
                     <p>Adding class <code>noborder</code> would make the element have no border.</p>

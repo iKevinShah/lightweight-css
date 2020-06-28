@@ -1,0 +1,59 @@
+ul, ol{
+    margin:.625rem
+}
+
+ul ul, ol ul, ul ol, ol ol{
+    margin-bottom:1.5rem
+}
+
+ul{
+    list-style:disc inside
+}
+
+ul ul{
+    list-style-type:circle
+}
+
+ol{
+    list-style:decimal inside
+}
+
+ol ol{
+    list-style-type:lower-alpha
+}
+
+ul li, ol li{
+    margin:.125rem 0
+}
+
+dl dt{
+    font-weight:600
+}
+
+dl dd{
+    margin:0 0 1.25rem 1.5rem
+}
+
+.h-list, .v-list{
+    list-style:none;
+    padding:0;
+    margin:0
+}
+
+.v-list .v-list{
+    padding:.125rem .75rem
+}
+
+.v-list li{
+    display:block;
+    padding:.25rem
+}
+
+.h-list li{
+    display:inline;
+    padding:0 1rem 0 0
+}
+
+.h-list li:last-child{
+    padding:0
+}

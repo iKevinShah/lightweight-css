@@ -1,0 +1,25 @@
+.alert{
+    background:#049;
+    background-image: linear-gradient(to bottom, #25a,#049);
+    position:relative;
+    border-radius:.375rem;
+    padding:1rem 1.5rem;
+    margin-bottom:1rem;
+    color:#fff;
+    transition:opacity 300ms ease-out;
+}
+
+.close{
+    position:absolute;
+    top:.5rem;
+    right:1rem;
+    font-size:1.5rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:color 150ms ease-out
+}
+
+.close:hover{
+    color:#111;
+    transition:color 150ms ease-in
+}

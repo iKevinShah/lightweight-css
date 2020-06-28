@@ -1,0 +1,156 @@
+.page{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:flex-start;
+    align-items:flex-start;
+    min-height:100vh;
+    background:#F7F7F7;
+    color:#191919
+}
+
+.night .page{
+    background:#191919;
+    color:#F7F7F7
+}
+
+nav, header, footer{
+    flex:0 0 auto;
+    width:100%
+}
+
+main{
+    flex:1 1 100%;
+    width:100%
+}
+
+.container{
+    display:flex;
+    flex-flow: column nowrap;
+    min-width:320px;
+    width:100%;
+    max-width:1346px;
+    margin:0 auto;
+    padding:0 1rem
+}
+
+.row{
+    display:flex;
+    flex-flow:row wrap;
+    align-items:flex-start;
+    justify-content:flex-start
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    flex:1 0 100%
+}
+
+@media screen and (min-width:768px){
+    .col-1{
+        flex:1 0 8.33%
+    }
+    .col-2{
+        flex:1 0 16.66%
+    }
+    .col-3{
+        flex:1 0 25%
+    }
+    .col-4{
+        flex:1 0 33.33%
+    }
+    .col-5{
+        flex:1 0 41.66%
+    }
+    .col-6{
+        flex:1 0 50%
+    }
+    .col-7{
+        flex:1 0 58.33%
+    }
+    .col-8{
+        flex:1 0 66.66%
+    }
+    .col-9{
+        flex:1 0 75%
+    }
+    .col-10{
+        flex:1 0 83.33%
+    }
+    .col-11{
+        flex:1 0 91.66%
+    }
+    .col-12{
+        flex:1 0 100%
+    }
+}
+
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    main, .content{
+        flex-basis: auto !important;
+    }
+    .nav-search-query{
+        padding:0
+    }
+    .row{
+        display:block;
+    }
+    .row::after{
+        display: block;
+        content: "";
+        clear: both;
+    }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+        float:left;
+    }
+    .col-12{
+        width:100%
+    }
+
+    .col-11{
+        width:91.66%
+    }
+
+    .col-10{
+        width:83.33%
+    }
+
+    .col-9{
+        width:75%
+    }
+
+    .col-8{
+        width:66.66%
+    }
+
+    .col-7{
+        width:58.33%
+    }
+
+    .col-6{
+        width:50%
+    }
+
+    .col-5{
+        width:41.66%
+    }
+
+    .col-4{
+        width:33.33%
+    }
+
+    .col-3{
+        width:25%
+    }
+
+    .col-2{
+        width:16.66%
+    }
+
+    .col-1{
+        width:8.33%
+    }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width:768px){
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+        width:100%
+    }
+}

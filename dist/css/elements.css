@@ -1,0 +1,314 @@
+@font-face {
+    font-family:system;
+    font-style: normal;
+    font-weight: 400;
+    src:local(system-ui),
+    local(-apple-system),
+    local(BlinkMacSystemFont),
+    local('Segoe UI'),
+    local(Roboto),
+    local(Oxygen),
+    local(Ubuntu),
+    local(Cantarell),
+    local('Open Sans'),
+    local('Noto Sans'),
+    local('Fira Sans'),
+    local('Droid Sans'),
+    local('Apple Color Emoji'),
+    local('Segoe UI Emoji'),
+    local('Segoe UI Symbol'),
+    local('Noto Color Emoji'),
+    url('https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff') format('woff')
+}
+
+html{
+    height:100%;
+    font-size: 100%;
+    line-height: 1.5;
+    font-family: 'system', 'Helvetica Neue',Helvetica, Arial, sans-serif;
+    -moz-tab-size:4;
+    tab-size:4;
+    -ms-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+    letter-spacing:.00625rem;
+    word-spacing:.125rem;
+    word-break:normal;
+    -webkit-font-smoothing:subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling:touch;
+    text-rendering:optimizeLegibility;
+    text-overflow:ellipsis
+}
+
+@media screen and (max-width:1024px){
+    html{
+        font-size:93.75%
+    }
+}
+
+@media screen and (max-width:768px){
+    html{
+        font-size:87.5%
+    }
+}
+
+a, a:link{
+    color:#049
+}
+
+.night a, .night a:link{
+    color:#8be
+}
+
+a:visited{
+    color:#609
+}
+
+.night a:visited{
+    color:#b9d
+}
+
+a:hover{
+    color:#8be
+}
+
+.night a:hover{
+    color:#def
+}
+
+a, a:link, a:active, a:hover {
+    outline: none
+}
+
+a:focus:not(:active):not(:hover) {
+    outline:#4b4a4d dotted .0625rem;
+    outline-offset:.125rem;
+}
+
+.night a:focus:not(:active):not(:hover) {
+    outline-color:#fff
+}
+
+abbr[title] {
+    border-bottom: 0.0625rem dotted;
+    text-decoration: none
+}
+
+code, kbd, pre, samp, .code{
+    font-family:Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Liberation Mono, monospace;
+    font-size:91%;
+}
+
+pre{
+    max-width:100%;
+    overflow-x:auto
+}
+
+.code, code{
+    padding:.0625rem .5rem;
+    margin:0 .25rem;
+    border-radius:.25rem;
+    background:#888;
+    border:.0625rem solid #666;
+    color: #eee
+}
+
+.night .code, .night code{
+    background:#999;
+    border-color: #333;
+    color: #fff
+}
+
+pre > code{
+    display:block;
+    padding:1rem;
+    margin:0;
+    overflow-x:auto
+}
+
+p{
+    flex:1 0 100%;
+    margin:0 auto 1rem;
+    line-height:2
+}
+
+p:last-child{
+    margin:0 auto
+}
+
+sub, sup{
+    font-size:80%;
+    line-height:0;
+    position:relative
+}
+
+sub{
+    bottom:-0.25em
+}
+
+sup{
+    top:-0.75em
+}
+
+img{
+    border:0
+}
+
+svg{
+    fill:currentColor
+}
+
+svg:not(:root){
+    overflow:hidden
+}
+
+mark{
+    background:#ff0;
+    color:#111
+}
+
+blockquote{
+    margin:.75rem 0;
+    padding:.625rem;
+    border-left:.75rem solid #ddd
+}
+
+.night blockquote{
+    border-left-color: #aaa
+}
+
+blockquote cite{
+    margin-top:.5rem;
+    display:block;
+    font-style:italic;
+    color:#aaa
+}
+
+blockquote cite:before{
+    content:' — '
+}
+
+h1, h2, h3, h4, h5, h6{
+    line-height:1.1;
+    margin:0 0 1rem;
+    font-weight:bolder;
+    letter-spacing:.025rem
+}
+
+h1{
+    font-size:2.25rem
+}
+
+h2{
+    font-size:1.875rem
+}
+
+h3{
+    font-size:1.5rem
+}
+
+h4{
+    font-size:1.25rem
+}
+
+h5{
+    font-size:1rem
+}
+
+h6{
+    font-size:0.75rem
+}
+
+.big{
+    font-size:115%;
+    line-height:1.75
+}
+
+.small, small{
+    font-size:84%
+}
+
+b, strong, .strong{
+    font-weight: bold
+}
+
+em, dfn, .italic{
+    font-style:italic
+}
+
+h1, h2, h3, h4, h5, h6, b, strong, .strong, .big, .small, small, em, dfn, .italic {
+    color:#111
+}
+
+.night h1, .night h2,.night h3,.night h4,.night h5,.night h6,.night b,.night strong,.night .strong,.night .big,.night .small,.night small,.night em,.night dfn,.night .italic {
+    color:#F9F9F9
+}
+
+hr{
+    border:0;
+    margin:.625rem auto;
+    height:.0625rem;
+    border-bottom:.0625rem solid #ddd
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+    table-layout:fixed;
+    text-align:left;
+    width:100%;
+    margin-bottom:1.25rem
+}
+
+table thead{
+    font-weight:600;
+    border-bottom:.0625rem solid #ddd
+}
+
+th, td{
+    word-wrap:break-word
+}
+
+table th, table td{
+    padding:1rem;
+    border-bottom:.0625rem solid #ddd
+}
+
+.night hr,.night table thead,.night table th,.night table td{
+    border-bottom-color: #000
+}
+
+footer{
+    padding:1rem 0;
+    margin-top:1.25rem;
+    border-top:.5rem solid #08f;
+    background:#fff
+}
+
+.night footer{
+    background:#333
+}
+
+.content{
+    flex:1 1 100%;
+    padding:1.125rem 1.375rem;
+    margin:1rem 0;
+    border-radius:.375rem;
+    background:#fff;
+    border:.0625rem solid #eee;
+    box-shadow: 0 2rem 1rem -2rem #999
+}
+
+.night .content{
+    background:#333;
+    border-color: #262626
+}
+
+.table-striped 
+.table-striped tbody tr:nth-of-type(odd){
+    background:#f8f8f8
+}
+
+.night tbody tr:nth-of-type(odd){
+    background:#2D2D2D
+}

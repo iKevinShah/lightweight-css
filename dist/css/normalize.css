@@ -1,0 +1,82 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, dialog, embed, figure, bdi, figcaption, footer, header, hgroup, menu, main, nav, output, ruby, section, summary, time, mark, audio, video, wbr, button, input, select, textarea, progress{
+    background:transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing:border-box;
+    text-shadow:none;
+    text-align:left;
+    text-decoration:none;
+    outline:none;
+    z-index:1;
+    transform:none
+}
+
+p, div, article, aside, audio, details, dialog, embed, figure, footer, header, hgroup, menu, nav, section, summary, video, wbr, main, address, figcaption{
+    display:block
+}
+
+bdi, figcaption, keygen, mark, meter, progress, rp, rt, ruby, time{
+    display:inline
+}
+
+summary{
+    display:list-item
+}
+
+canvas{
+    display:inline-block
+}
+
+audio, canvas, iframe, img, svg, video{
+    height: auto;
+    max-width: 100%;
+    vertical-align:middle
+}
+
+audio:not([controls]){
+    display:none;
+    height:0
+}
+
+blockquote, q{
+    quotes:none
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+    content:''
+}
+
+a, area, button, input, label, select, summary, textarea, [tabindex]{
+    -ms-touch-action:manipulation;
+    touch-action:manipulation
+}
+
+[aria-busy="true"]{
+    cursor:progress
+}
+
+[aria-controls]{
+    cursor:pointer
+}
+
+[aria-disabled], [disabled]{
+    cursor:not-allowed
+}
+
+[aria-hidden="false"][hidden]:not(:focus){
+    clip:rect(0, 0, 0, 0);
+    display:inherit;
+    position:absolute
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button
+}

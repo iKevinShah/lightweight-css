@@ -1,0 +1,95 @@
+nav{
+    background:#111;
+    color:#fff;
+    display:flex;
+    height:4rem;
+    line-height:4rem
+}
+
+.night nav{
+    background:#515151
+}
+
+nav > .container{
+    display:flex;
+    flex-flow:row wrap
+}
+
+.nav-fixed{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:10001
+}
+
+.nav-brand{
+    min-width:5rem;
+    max-width:25rem;
+    flex:0 0 auto
+}
+
+.nav-brand a{
+    padding:.75rem
+}
+
+.nav-link a{
+    color:#fff;
+}
+
+.nav-search{
+    display:flex;
+    flex-flow:row nowrap;
+    position:relative;
+    padding:.5rem 1.25rem;
+    flex:1 1 auto;
+}
+
+.nav-search-box, .night .nav-search-box{
+    background:rgba(255,255,255,.75);
+    box-shadow:0 0 .125rem .0625rem rgba(255,255,255,.1);
+    height:2.5rem;
+    border-radius:.25rem;
+    transition:background 150ms ease-out, box-shadow 150ms ease-out
+}
+
+.nav-search-box:focus{
+    color:#333 !important;
+    background: #fff !important;
+    box-shadow:0 0 .125rem .0625rem rgba(255,255,255,.5) !important;
+    border: 0.0625rem solid rgba(255,255,255,.5) !important;
+    transition:background 150ms ease-in, box-shadow 150ms ease-in
+}
+
+.nav-search-btn, .night .nav-search-btn {
+    position:absolute;
+    height:2.75rem;
+    width:3rem;
+    top:.625rem;
+    right:1rem;
+    background:none;
+    transition:none
+}
+
+.nav-search-btn:focus, .nav-search-btn:hover{
+    box-shadow:none;
+    transform:none
+}
+
+.nav-link{
+    min-width:5rem;
+    flex:0 0 auto;
+    margin-left:auto
+}
+
+.nav-link > a, .night .nav-link > a{
+    color:#fff;
+    display:inline-block;
+    padding:0 .5rem;
+    transition:background .2s linear
+}
+
+.nav-link > a:hover{
+    background:rgba(255, 255, 255, .5);
+    transition:background .2s ease-out
+}
