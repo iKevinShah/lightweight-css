@@ -4,7 +4,7 @@
     color: #fff;
     display: inline;
     border-radius: 1rem;
-    font-size: .75rem;
+    font-size: .875rem;
     min-width: 1.5rem;
     padding: .125rem .5rem;
     text-align: center;
@@ -13,12 +13,11 @@
 }
 
 .label{
-    background:#049;
-    background-image: linear-gradient(to bottom, #25a,#049);
+    background: linear-gradient(to bottom, #999,#333);
     color:#fff;
     display:inline;
     padding:.5rem;
     font-size:90%;
     white-space:nowrap;
-    border-radius:.25rem
+    border-radius:.4375rem;
 }

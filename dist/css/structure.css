@@ -4,13 +4,14 @@
     justify-content:flex-start;
     align-items:flex-start;
     min-height:100vh;
-    background:#F7F7F7;
-    color:#191919
+    background: #eee;
+    color:#111;
+    transform: opacity .15s linear;
 }
 
 .night .page{
-    background:#191919;
-    color:#F7F7F7
+    background:#111;
+    color:#eee
 }
 
 nav, header, footer{

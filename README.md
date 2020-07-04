@@ -3,7 +3,15 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
-Changes in 0.8: 
+Changes in 0.8.2: 
+* Fixed dark mode and bright mode colors.
+* Fixed some `transitions`
+* Updated description
+* Removed `font-weight:bold` for h1..h6
+* Added toggle to toggle nightmode (this is only demo and not included with css)
+* Fixed versioning
+
+Changes in 0.8.1: 
 * Added '.night', moved away from css auto-detect dark mode
 * Removed 'success', 'danger' like classes and added 'secondary','complementary' colors"
 * Added 'btn-group'

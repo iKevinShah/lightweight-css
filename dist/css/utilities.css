@@ -92,25 +92,22 @@ img.responsive{
 
 .highlight{
     background:#ff0;
-    color:#121212;
+    border:.0625rem solid #ee0;
+    color:#111;
     padding:.375rem.5rem;
     margin:0 .125rem;
-    border-radius:.25rem;
+    border-radius:.4375rem;
 }
 
 .primary, .night .primary{
-    background: #08f;
-    background-image: linear-gradient(to bottom, #29f,#08f);
+    background: linear-gradient(to bottom, #09f, #06a);
 }
 .secondary, .night .secondary{
-    background:#3c3;
-    background-image: linear-gradient(to bottom, #5d5,#3c3);
+    background: linear-gradient(to bottom, #0d4 ,#0a3);
 }
 .tertiary, .night .tertiary{
-    background:#f02;
-    background-image: linear-gradient(to bottom, #f24, #f02);
+    background: linear-gradient(to bottom, #f03, #a02);
 }
 .complementary, .night .complementary{
-    background:#f70;
-    background-image: linear-gradient(to bottom, #f94, #f70);
+    background: linear-gradient(to bottom,#f93, #f53);
 }

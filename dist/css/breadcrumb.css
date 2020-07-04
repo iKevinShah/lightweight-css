@@ -9,7 +9,7 @@ ul.breadcrumb > li{
 ul.breadcrumb > li > a{
     text-decoration:none;
     display:inline-block;
-    color:#333
+    color:#222
 }
 
 ul.breadcrumb > li:not(:last-child)::after{
@@ -19,7 +19,7 @@ ul.breadcrumb > li:not(:last-child)::after{
 }
 
 ul.breadcrumb > li:last-child{
-    color:#bbb;
+    color:#888;
     font-style: italic
 }
 
@@ -28,11 +28,9 @@ ul.breadcrumb > li:last-child{
 }
 
 .night ul.breadcrumb > li:not(:last-child)::after{
-    content:" >";
-    padding:0 .25rem;
-    color:#ccc
+    color:#555
 }
 
 .night ul.breadcrumb > li:last-child{
-    color:#ccc
+    color:#666
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Lightweight CSS - v0.8.1</title>
+    <title>Lightweight CSS - v0.8.2</title>
     <link rel="stylesheet" href="style.css" />
     <!--[if IE]>
         <style>
@@ -15,10 +15,40 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <style>
-        nav.branding{
-            background-color: #af82ed;
-            background-image:linear-gradient(to bottom , #af82ed, #a26eea)
+        .switch {
+            display: flex;
+            padding: 3.3333333333px;
+            width: 5rem;
+            min-height: 2.5rem;
+            background: #58a;
+            border-radius: 2.5rem;
+            cursor: pointer;
+            transition: .1s ease;
+            padding: 0 !important
         }
+
+        .switch:before {
+            content: "🌙";
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: #fff;
+            border-radius: 50%;
+            transition: .1s ease;
+            margin-left: .0625rem
+        }
+
+        .switch.on {
+            background: #5bf
+        }
+
+        .switch.on:before {
+            content: "☀️";
+            transform: translateX(2.5rem) rotate(180deg);
+        }
+
         .grid-demo {
             margin: 0 0 1rem 0;
             padding: 0
@@ -32,7 +62,7 @@
             padding: 1rem
         }
 
-        .night .grid-demo > div {
+        .night .grid-demo>div {
             background: rgb(100, 100, 100);
             border: .0625rem solid rgb(10, 10, 10);
         }
@@ -57,58 +87,46 @@
         <header>
             <nav class="branding">
                 <div class="container">
-                    <div class="nav-brand">
-                        Lightweight CSS
-                    </div>
+                    <div class="nav-brand">Lightweight CSS</div>
                     <form name="search" action="" method="GET" class="nav-search">
                         <input name="nav-search-query" class="nav-search-box" type="text"
-                            placeholder="What are you looking for? (Just for representational purpose)">
+                            placeholder="What are you looking for? (Just for representational purpose)" />
                         <button name="nav-search-submit" class="nav-search-btn" type="submit">🔍</button>
                     </form>
                     <div class="nav-link">
+                        <a class="switch" id="night"></a>
                         <a href="index.html">Home</a>
-                        <a href="#about">About</a>
                         <a href="#elements">Elements</a>
                     </div>
                 </div>
             </nav>
         </header>
         <main>
-
             <div class="container">
                 <div class="content">
-                    <h2 id="about">About Lightweight CSS - <span class="code">v0.8.1</span></h2>
-                    <p>I am a Consultant by the day and a rookie web-dev by the night for some personal pet-projects. I
-                        have tried various frameworks like the Bootstrap, Material Design, pure css, skeleton and the
-                        likes but every one of them provided a lot of elements I did not need and hence had to
-                        eventually remove them (for smaller CSS size, optimization and everything around that)
-                        <strong>AND</strong> I had to add some components which I wanted and had to add those.This
-                        created problems maintaining which each update. So I have created a baseline css which contains
-                        only all basic elements that I am mostly going use in my projects. Making it public in case it
-                        might be of help to anyone interested.</p>
-                    <p><span class="highlight">Note:</span> The font, it uses no pixel values (or doesn't set a fixed
+                    <h1 id="about">About Lightweight CSS - <span class="code">v0.8.2</span></h1>
+                    <h3> Simple, modular and lightweight CSS boilerplate</h3>
+                    <p>Larger, more prevelant frameworks like Bootstrap, Material Design and the likes provide a lot of
+                        elements which you might not use but would still waste your bandwidth and lead to larger
+                        pagesize and slower loadtimes. Add to it some custom designing aspect which you might want to
+                        add in later. This created problems maintaining which each update. So lightweight css
+                        provides a baseline css boilerplate which contains only all the basic elements (plus some selected utilities).</p>
+                        
+                    <p><strong>Note: </strong> The font, it uses no pixel values (or doesn't set a fixed
                         font size), <strong>that is by design</strong>. It is to respect user's chosen font-size (For
                         example: Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
                     </p>
+                    <p><strong>Note: </strong> It is strictly CSS only. All the JS used on the page is only for demonstration purpose.
                 </div>
                 <div class="content">
-                    <h2 id="colors">Color Palette</h2>
-                    <div class="row colors">
-                        <div class="col-3 primary text-center" style="padding:1.25rem;color:#fff;">Primary</div>
-                        <div class="col-3 complementary text-center" style="padding:1.25rem;color:#fff">Complementary</div>
-                        <div class="col-3 secondary text-center" style="padding:1.25rem;color:#fff">Secondary</div>
-                        <div class="col-3 tertiary text-center" style="padding:1.25rem;color:#fff">Tertiary</div>
-                    </div>
-                </div>
-
-                <div class="content">
-                    <h2 id="elements">Elements</h2>
+                    <h1 id="elements">Elements</h1>
                     <p>
                         Following are the items included in the css <span class="strong"> &lt; 5KB minified and
                             gzipped</span>
                     </p>
                     <ol class="v-list">
                         <li><a href="#page">Page Structure</a></li>
+                        <li><a href="#colors">Color Palette</a></li>
                         <li><a href="#grids">Grids</a></li>
                         <li><a href="#content">Content</a></li>
                         <li><a href="#nav">Navbar</a></li>
@@ -143,7 +161,7 @@
                     </ol>
                 </div>
                 <div class="content">
-                    <h2 id="page">Page Structure</h2>
+                    <h1 id="page">Page Structure</h1>
                     <p>The class <code>page</code> is the first class of the page, it contains all the elements except
                         fixed positioned nav or footer (You need to align "main" accordingly, in case you are using
                         fixed divs).The class <code>page</code> contains all the elements of a traditional web page.
@@ -164,7 +182,17 @@
                         the items within container will have width as 1346px and align themselves centrally.</p>
                 </div>
                 <div class="content">
-                    <h2 id="grids">Responsive Grids</h2>
+                    <h1 id="colors">Color Palette</h1>
+                    <div class="row colors">
+                        <div class="col-3 primary text-center" style="padding:1.25rem;color:#fff;">Primary</div>
+                        <div class="col-3 complementary text-center" style="padding:1.25rem;color:#fff">Complementary
+                        </div>
+                        <div class="col-3 secondary text-center" style="padding:1.25rem;color:#fff">Secondary</div>
+                        <div class="col-3 tertiary text-center" style="padding:1.25rem;color:#fff">Tertiary</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h1 id="grids">Responsive Grids</h1>
                     <p>Use parent class as row i.e. class <code>row</code> and then class <code>col-[1-12]</code>. Here,
                         the number used takes up that parts from 12 available, col-1 is 1/12th of total width and so on
                         ... till col-12 which takes up 100% of the width. If there is any width remaining, the
@@ -266,12 +294,12 @@
                     </div>
                 </div>
                 <div class="content">
-                    <h2 id="content">Content</h2>
+                    <h1 id="content">Content</h1>
                     <p>Use class <code>content</code>, for a clear, spacious div which can be used for Content. For
                         demo, each rectangle with rounded corners are "content" divs.</p>
                 </div>
                 <div class="content">
-                    <h2 id="nav">Navbars</h2>
+                    <h1 id="nav">Navbars</h1>
                     <p>Use <code>&lt;nav&gt;</code> for a navbar. 3 classes to use with navs.</p>
                     <ol>
                         <li>Use class <code>navbar-brand</code> for left sided logo, width is 50px and stretches upto
@@ -297,7 +325,7 @@
                     <p>Also you can use class <code>nav nav-fixed</code> to have it fixed always at the top.</p>
                 </div>
                 <div class="content">
-                    <h2 id="breadcrumb">Breadcrumb</h2>
+                    <h1 id="breadcrumb">Breadcrumb</h1>
                     <p>Adding class <code>breadcrumb</code> to a list to make it show like a breadcrumb below</p>
                     <ul class="breadcrumb">
                         <li><a href="#">Home</a></li>
@@ -307,7 +335,7 @@
                     </ul>
                 </div>
                 <div class="content">
-                    <h2 id="text-elements">Text and Styles</h2>
+                    <h1 id="text-elements">Text and Styles</h1>
                     <h1>Heading 1</h1>
                     <h2>Heading 2</h2>
                     <h3>Heading 3</h3>
@@ -351,7 +379,7 @@ print('Hello, world!');
 print('This is some decently long line to see if this line goes out and overflows and does not instead break the line');</code></pre>
                 </div>
                 <div class="content">
-                    <h2 id="text-align-left">Text align left</h2>
+                    <h1 id="text-align-left">Text align left</h1>
                     <p>Use class <code>text-left</code> for left-aligned texts</p>
                     <p class="text-left">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -364,7 +392,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="text-align-right">Text align right</h2>
+                    <h1 id="text-align-right">Text align right</h1>
                     <p>Use class <code>text-right</code> for right-aligned texts</p>
                     <p class="text-right">
                         It is a long established fact that a reader will be distracted by the readable content of a page
@@ -377,7 +405,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="text-align-center">Centered</h2>
+                    <h1 id="text-align-center">Centered</h1>
                     <p>Use class <code>text-center</code> for centrally-aligned texts</p>
                     <p class="text-center">
                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
@@ -397,7 +425,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="text-align-justified">Justified Text</h2>
+                    <h1 id="text-align-justified">Justified Text</h1>
                     <p>Use class <code>text-justify</code> for justified text blocks</p>
                     <p class="text-justify">
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered
@@ -411,7 +439,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="text-shades">Shades of text</h2>
+                    <h1 id="text-shades">Shades of text</h1>
                     <p>We have class <code>text-light</code>, class <code>text-lighter</code> and class
                         <code>text-lightest</code> as demonstrated below
                     </p>
@@ -436,7 +464,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="text-invisible">Invisible Text</h2>
+                    <h1 id="text-invisible">Invisible Text</h1>
                     <p>Use class <code>text-invisible</code> for invisible texts</p>
                     <p class="text-invisible">
                         This is a rather very small line of invisible text
@@ -444,7 +472,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     There is actually some text between the "Invisible Text" and this line which is not visible.
                 </div>
                 <div class="content">
-                    <h2 id="text-highlight">Highlight Text</h2>
+                    <h1 id="text-highlight">Highlight Text</h1>
                     <p>Use class <code>highlight</code> to highlight a span of text as shown below.</p>
                     <p>
                         Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
@@ -453,7 +481,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="responsive_image">Responsive Image</h2>
+                    <h1 id="responsive_image">Responsive Image</h1>
                     <p>Use class <code>responsive</code> on any img tag to make it responsive.
                         <br />
                         <img class="responsive" src="//placehold.it/950x450" alt="Responsive Image testing" />
@@ -461,7 +489,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="responsive_video">Responsive Media (video / iframe / embeds)</h2>
+                    <h1 id="responsive_video">Responsive Media (video / iframe / embeds)</h1>
                     <p>Use class <code>video-responsive</code> and iframe / embed / object as a child div (16:9)
                         Default</p>
                     <div class="video-responsive">
@@ -476,7 +504,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </div>
                 </div>
                 <div class="content">
-                    <h2 id="lists">Lists</h2>
+                    <h1 id="lists">Lists</h1>
                     <div class="row">
                         <div class="col-6">
                             <h3>Lists & Nested lists</h3>
@@ -538,7 +566,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </div>
                 </div>
                 <div class="content">
-                    <h2 id="table">Tables</h2>
+                    <h1 id="table">Tables</h1>
                     <h3>Simple Table</h3>
                     <p>Default table syntax would do fine</p>
                     <table>
@@ -664,7 +692,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </table>
                 </div>
                 <div class="content">
-                    <h2 id="form">Form Elements</h2>
+                    <h1 id="form">Form Elements</h1>
                     <form name="demo" method="post" action="#">
                         <fieldset>
                             <legend>Form Elements</legend>
@@ -775,7 +803,7 @@ print('This is some decently long line to see if this line goes out and overflow
                                     placeholder='input type="datetime-local"' />
                             </div>
                             <div class="input-group">
-                                <h2 id="progressbar">Progress Bar</h2>
+                                <h1 id="progressbar">Progress Bar</h1>
                                 <p>Use class <code>progress</code> and then a child div with
                                     class <code>progress-bar</code> and provide width: <code>style="width:X%</code></p>
                                 <div class="progress">
@@ -819,23 +847,23 @@ print('This is some decently long line to see if this line goes out and overflow
                                 </p>
                                 <p>
                                     Button Group, a group of buttons together. Use class <code>btn-group</code>
-                                    <div class="btn-group">
-                                        <a class="btn clear" href="#">G</a>
-                                        <a class="btn clear" href="#">o</a>
-                                        <a class="btn clear" href="#">o</a>
-                                        <a class="btn clear" href="#">o</a>
-                                        <a class="btn clear" href="#">o</a>
-                                        <a class="btn clear" href="#">g</a>
-                                        <a class="btn clear" href="#">l</a>
-                                        <a class="btn clear" href="#">e</a>
-                                    </div>
+                                <div class="btn-group">
+                                    <a class="btn clear" href="#">G</a>
+                                    <a class="btn clear" href="#">o</a>
+                                    <a class="btn clear" href="#">o</a>
+                                    <a class="btn clear" href="#">o</a>
+                                    <a class="btn clear" href="#">o</a>
+                                    <a class="btn clear" href="#">g</a>
+                                    <a class="btn clear" href="#">l</a>
+                                    <a class="btn clear" href="#">e</a>
+                                </div>
                                 </p>
                             </div>
                         </fieldset>
                     </form>
                 </div>
                 <div class="content">
-                    <h2 id="pagination">Pagination</h2>
+                    <h1 id="pagination">Pagination</h1>
                     <p>Use class <code>pagination</code> for any list to be used for pagination. Note that it will align
                         at the center by default.</p>
                     <ul class="pagination">
@@ -853,7 +881,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </ul>
                 </div>
                 <div class="content">
-                    <h2 id="badge">Badges</h2>
+                    <h1 id="badge">Badges</h1>
                     <p>Use class <code>badge</code> in a span of text</p>
                     <p>
                         <button class="btn">Notifications <span class="badge">8</span></button>
@@ -864,7 +892,7 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="label">Label</h2>
+                    <h1 id="label">Label</h1>
                     <p>Use class <code>label</code> for creating a label. Add primary / secondary / tertiary /
                         complementary for different colored label.</p>
                     <p>
@@ -876,34 +904,36 @@ print('This is some decently long line to see if this line goes out and overflow
                     </p>
                 </div>
                 <div class="content">
-                    <h2 id="alert">Alert</h2>
+                    <h1 id="alert">Alert</h1>
                     <p>Use class <code>alert</code> for creating an alert. Add primary / secondary / tertiary /
                         complementary for different colored alert.</p>
                     <div class="alert">Default alert with class <code>alert</code><span class="close"
-                            onclick="this.parentElement.style.display='none';">&times;</span>
+                            onclick="this.parentElement.style.opacity=0;this.parentElement.style.transition='opacity .1s linear'">&times;</span>
                     </div>
                     <div class="alert primary">Primary alert with class <code>alert primary</code><span class="close"
-                            onclick="this.parentElement.style.display='none';">&times;</span>
+                            onclick="this.parentElement.style.opacity=0;this.parentElement.style.transition='opacity .1s linear'">&times;</span>
                     </div>
                     <div class="alert secondary">Secondary alert with class <code>alert secondary</code> <span
-                            class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+                            class="close"
+                            onclick="this.parentElement.style.opacity=0;this.parentElement.style.transition='opacity .1s linear'">&times;</span>
                     </div>
                     <div class="alert tertiary">Tertiary alert with class <code>alert tertiary</code><span class="close"
-                            onclick="this.parentElement.style.display='none';">&times;</span>
+                            onclick="this.parentElement.style.opacity=0;this.parentElement.style.transition='opacity .1s linear'">&times;</span>
                     </div>
-                    <div class="alert complementary">Complementary alert with class <code>alert complementary</code><span
-                            class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <div class="alert complementary">Complementary alert with class
+                        <code>alert complementary</code><span class="close"
+                            onclick="this.parentElement.style.opacity=0;this.parentElement.style.transition='opacity .1s linear'">&times;</span>
                     </div>
                 </div>
                 <div class="content">
-                    <h2 id="fullscreen">Fullscreen div</h2>
+                    <h1 id="fullscreen">Fullscreen div</h1>
                     <p>Use class <code>fullscreen</code> on a div to keep a div with 100% width and 100vh height.</p>
                     <div class="fullscreen" style="background:rgba(255,255,255,.2)">
                         <p>This is a fullscreen div</p>
                     </div>
                 </div>
                 <div class="content">
-                    <h2 id="hide-show">Hide / Show / Misc classes</h2>
+                    <h1 id="hide-show">Hide / Show / Misc classes</h1>
                     <p>3 Classes which would help when eventually further stuff is added like Dropdowns / Toggles /
                         etc.<br />
                         <span class="highlight">Please note that the hide / show classes change the opacity &
@@ -919,12 +949,17 @@ print('This is some decently long line to see if this line goes out and overflow
                 </div>
 
                 <div class="content">
-                    <h2>Final Thoughts</h2>
+                    <h1>Final Thoughts</h1>
                     <p>If you plan on using this, do note that, a lot of it is flex based so compatibility is from IE10
                         onwards. If you need support for older browsers, do not use this. I have left out the dropdown,
                         tooltips, popover, modal and other things intentionally because that requires javascript to
                         function properly and I intend on keeping this without any javascript. This is the first
                         release, if you intend on contributing - Please do :)</p>
+                </div>
+
+                <div class="content">
+                    <h1>Credits</h1>
+                    <p>The night-mode toggle on the page is from <a href="https://codepen.io/lazercaveman/pen/RBoXNG">Ali Soueidan</a></p>
                 </div>
             </div><!-- ends container -->
         </main>
@@ -940,5 +975,41 @@ print('This is some decently long line to see if this line goes out and overflow
         </footer>
     </div><!-- Ends Page -->
 </body>
+<script>
+    // Author: Ali Soueidan
+    // Author URI: https//: www.alisoueidan.com
+    var nightToggle = document.getElementById('night');
+    var bodySelector = document.body;;
+
+    if (nightToggle) {
+        nightToggle.addEventListener('click', function () {
+            if (bodySelector.classList.contains("night")) {
+                bodySelector.style.opacity = 0;
+                bodySelector.style.transition = 'opacity 150ms ease-in'
+                setTimeout(function () {
+                    bodySelector.classList.remove("night");
+                    nightToggle.classList.remove("on");
+                    bodySelector.style.opacity = 1;
+                    bodySelector.style.transition = 'opacity 150ms ease-out'
+                }, 150);
+            }
+            else {
+                bodySelector.style.background = 'black';
+                bodySelector.style.opacity = 0;
+                bodySelector.style.transition = 'opacity 150ms ease-in'
+                setTimeout(function () {
+                    bodySelector.style.background = '';
+                    bodySelector.classList.add("night");
+                    nightToggle.classList.add("on");
+                    bodySelector.style.opacity = 1;
+                    bodySelector.style.transition = 'opacity 150ms ease-out'
+                }, 150);
+            }
+        }, false);
+    }
+    else {
+        console.err('Toggle not found');
+    }
+</script>
 
 </html>

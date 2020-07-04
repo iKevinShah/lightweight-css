@@ -1,5 +1,5 @@
 nav{
-    background:#111;
+    background:#5bf;
     color:#fff;
     display:flex;
     height:4rem;
@@ -7,7 +7,7 @@ nav{
 }
 
 .night nav{
-    background:#515151
+    background:#58a
 }
 
 nav > .container{
@@ -20,21 +20,14 @@ nav > .container{
     top:0;
     left:0;
     right:0;
-    z-index:10001
+    z-index:11
 }
 
 .nav-brand{
     min-width:5rem;
     max-width:25rem;
-    flex:0 0 auto
-}
-
-.nav-brand a{
-    padding:.75rem
-}
-
-.nav-link a{
-    color:#fff;
+    flex:0 0 auto;
+    padding:0 .75rem
 }
 
 .nav-search{
@@ -47,33 +40,31 @@ nav > .container{
 
 .nav-search-box, .night .nav-search-box{
     background:rgba(255,255,255,.75);
-    box-shadow:0 0 .125rem .0625rem rgba(255,255,255,.1);
+    border: 0.0625rem solid rgba(255,255,255,.85);
     height:2.5rem;
-    border-radius:.25rem;
-    transition:background 150ms ease-out, box-shadow 150ms ease-out
+    border-radius:.4375rem;
+    transition:background .15s linear, box-shadow .15s linear
 }
 
-.nav-search-box:focus{
+.nav-search-box:focus, .night .nav-search-box:focus{
     color:#333 !important;
     background: #fff !important;
-    box-shadow:0 0 .125rem .0625rem rgba(255,255,255,.5) !important;
-    border: 0.0625rem solid rgba(255,255,255,.5) !important;
-    transition:background 150ms ease-in, box-shadow 150ms ease-in
+    box-shadow:0 0 .125rem .0625rem rgba(255, 255, 255, 0.5) !important;
+    border: 0.0625rem solid rgba(255,255,255,.9) !important;
+    transition:background .15s linear, box-shadow .15s linear
 }
 
 .nav-search-btn, .night .nav-search-btn {
     position:absolute;
     height:2.75rem;
     width:3rem;
-    top:.625rem;
+    top:.5rem;
     right:1rem;
-    background:none;
-    transition:none
+    background:none
 }
 
 .nav-search-btn:focus, .nav-search-btn:hover{
-    box-shadow:none;
-    transform:none
+    box-shadow:none
 }
 
 .nav-link{
@@ -86,10 +77,11 @@ nav > .container{
     color:#fff;
     display:inline-block;
     padding:0 .5rem;
-    transition:background .2s linear
+    transition:background .15s linear
 }
 
 .nav-link > a:hover{
-    background:rgba(255, 255, 255, .5);
-    transition:background .2s ease-out
+    background:rgba(255, 255, 255, .4);
+    transition:background .15s linear;
+    text-decoration: none
 }

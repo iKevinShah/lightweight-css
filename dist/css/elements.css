@@ -24,7 +24,7 @@
 html{
     height:100%;
     font-size: 100%;
-    line-height: 1.5;
+    line-height: 2;
     font-family: 'system', 'Helvetica Neue',Helvetica, Arial, sans-serif;
     -moz-tab-size:4;
     tab-size:4;
@@ -53,27 +53,28 @@ html{
 }
 
 a, a:link{
-    color:#049
-}
-
-.night a, .night a:link{
-    color:#8be
+    color:#29f;
 }
 
 a:visited{
-    color:#609
-}
-
-.night a:visited{
-    color:#b9d
+    color:#53a;
 }
 
 a:hover{
-    color:#8be
+    color:#7be;
+    text-decoration:underline
+}
+
+.night a, .night a:link{
+    color:#7be
+}
+
+.night a:visited{
+    color:#a8f
 }
 
 .night a:hover{
-    color:#def
+    color:#29f
 }
 
 a, a:link, a:active, a:hover {
@@ -81,7 +82,7 @@ a, a:link, a:active, a:hover {
 }
 
 a:focus:not(:active):not(:hover) {
-    outline:#4b4a4d dotted .0625rem;
+    outline:#333 dotted .0625rem;
     outline-offset:.125rem;
 }
 
@@ -95,8 +96,8 @@ abbr[title] {
 }
 
 code, kbd, pre, samp, .code{
-    font-family:Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Liberation Mono, monospace;
-    font-size:91%;
+    font-family: Consolas, monospace;
+    font-size:smaller;
 }
 
 pre{
@@ -107,7 +108,7 @@ pre{
 .code, code{
     padding:.0625rem .5rem;
     margin:0 .25rem;
-    border-radius:.25rem;
+    border-radius:.4375rem;
     background:#888;
     border:.0625rem solid #666;
     color: #eee
@@ -128,8 +129,7 @@ pre > code{
 
 p{
     flex:1 0 100%;
-    margin:0 auto 1rem;
-    line-height:2
+    margin:0 auto 1rem
 }
 
 p:last-child{
@@ -185,13 +185,13 @@ blockquote cite{
 }
 
 blockquote cite:before{
-    content:' — '
+    content:' ― '
 }
 
 h1, h2, h3, h4, h5, h6{
     line-height:1.1;
     margin:0 0 1rem;
-    font-weight:bolder;
+    font-weight: 500;
     letter-spacing:.025rem
 }
 
@@ -229,7 +229,7 @@ h6{
 }
 
 b, strong, .strong{
-    font-weight: bold
+    font-weight: 600
 }
 
 em, dfn, .italic{
@@ -241,7 +241,7 @@ h1, h2, h3, h4, h5, h6, b, strong, .strong, .big, .small, small, em, dfn, .itali
 }
 
 .night h1, .night h2,.night h3,.night h4,.night h5,.night h6,.night b,.night strong,.night .strong,.night .big,.night .small,.night small,.night em,.night dfn,.night .italic {
-    color:#F9F9F9
+    color:#fff
 }
 
 hr{
@@ -281,7 +281,7 @@ table th, table td{
 footer{
     padding:1rem 0;
     margin-top:1.25rem;
-    border-top:.5rem solid #08f;
+    border-top:.5rem solid #06a;
     background:#fff
 }
 
@@ -292,23 +292,21 @@ footer{
 .content{
     flex:1 1 100%;
     padding:1.125rem 1.375rem;
-    margin:1rem 0;
-    border-radius:.375rem;
+    margin-top:1.25rem;
+    border-radius:.4375rem;
     background:#fff;
-    border:.0625rem solid #eee;
-    box-shadow: 0 2rem 1rem -2rem #999
+    border:.0625rem solid #ddd;
+    box-shadow: 0 2rem .75rem -1.75rem #888
 }
-
 .night .content{
-    background:#333;
-    border-color: #262626
+    background:#444;
+    border-color: #333
 }
 
-.table-striped 
 .table-striped tbody tr:nth-of-type(odd){
-    background:#f8f8f8
+    background:#eee
 }
 
-.night tbody tr:nth-of-type(odd){
-    background:#2D2D2D
+.night .table-striped  tbody tr:nth-of-type(odd){
+    background:#333
 }

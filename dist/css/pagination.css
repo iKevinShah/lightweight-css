@@ -12,22 +12,21 @@ ul.pagination li a{
     border:.0625rem solid #ddd;
     border-right:0;
     margin-right:-.0625rem;
-    padding:.75rem 1rem;
-    transition: background 150ms ease-in;
+    padding:.75rem 1rem
 }
 
 ul.pagination li:first-child a{
-    border-radius:.25rem 0 0 .25rem;
+    border-radius:.4375rem 0 0 .4375rem;
 }
 
 .night ul.pagination li a{
     background: #2D2D2D;
     color:#ddd;
-    border-color: #000
+    border-color: #000;
 }
 
 ul.pagination li:last-child a{
-    border-radius:0 .25rem .25rem 0;
+    border-radius:0 .4375rem .4375rem 0;
     border-right:.0625rem solid #ddd;
 }
 
@@ -35,14 +34,12 @@ ul.pagination li:last-child a{
     border-right-color: #000
 }
 
-ul.pagination li a.active, ul.pagination li a.active:hover, ul.pagination li a.active:focus{
-    background-color:#049;
+ul.pagination li a.active, ul.pagination li a.active:hover, ul.pagination li a.active:focus, ul.pagination li a:hover{
+    background: linear-gradient(to bottom, #09f, #06a);
     color:#fff;
     cursor:not-allowed
 }
 
 ul.pagination li a:hover{
-    background:#47b;
-    color:#fff;
-    transition: background 150ms ease-in;
+    cursor:pointer
 }
