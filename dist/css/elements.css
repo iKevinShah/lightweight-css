@@ -109,8 +109,8 @@ pre{
     padding:.0625rem .5rem;
     margin:0 .25rem;
     border-radius:.4375rem;
-    background:#888;
-    border:.0625rem solid #666;
+    background:#666;
+    border:.0625rem solid #333;
     color: #eee
 }
 
@@ -190,9 +190,7 @@ blockquote cite:before{
 
 h1, h2, h3, h4, h5, h6{
     line-height:1.1;
-    margin:0 0 1rem;
-    font-weight: 500;
-    letter-spacing:.025rem
+    margin:0 0 1rem
 }
 
 h1{
@@ -291,16 +289,25 @@ footer{
 
 .content{
     flex:1 1 100%;
-    padding:1.125rem 1.375rem;
-    margin-top:1.25rem;
+    padding:.75rem;
+    margin-top:1rem;
     border-radius:.4375rem;
     background:#fff;
     border:.0625rem solid #ddd;
-    box-shadow: 0 2rem .75rem -1.75rem #888
+    box-shadow: 0 .75rem .5rem -.5rem #777;
 }
+
 .night .content{
     background:#444;
     border-color: #333
+}
+
+@media screen and (min-width:768px){
+    .content{
+        padding:1.125rem 1.375rem;
+        margin-top:1.25rem;
+        box-shadow: 0 1.75rem .75rem -1.75rem #888
+    }
 }
 
 .table-striped tbody tr:nth-of-type(odd){

@@ -6,6 +6,7 @@
     min-height:100vh;
     background: #eee;
     color:#111;
+    min-width:320px;
     transform: opacity .15s linear;
 }
 
@@ -27,11 +28,16 @@ main{
 .container{
     display:flex;
     flex-flow: column nowrap;
-    min-width:320px;
     width:100%;
     max-width:1346px;
     margin:0 auto;
-    padding:0 1rem
+    padding:0 .75rem
+}
+
+@media screen and (min-width:768px){
+    .container{
+        padding:0 1.25rem
+    }
 }
 
 .row{

@@ -17,27 +17,27 @@
     <style>
         .switch {
             display: flex;
-            padding: 3.3333333333px;
-            width: 5rem;
-            min-height: 2.5rem;
+            padding: .125rem;
+            width: 3rem;
+            min-height: 1rem;
             background: #58a;
-            border-radius: 2.5rem;
+            border-radius: 1rem;
             cursor: pointer;
             transition: .1s ease;
             padding: 0 !important
         }
 
         .switch:before {
+            font-size: .875rem;
             content: "🌙";
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 1.625rem;
+            height: 1.625rem;
             background: #fff;
             border-radius: 50%;
-            transition: .1s ease;
-            margin-left: .0625rem
+            transition: .1s ease
         }
 
         .switch.on {
@@ -46,7 +46,7 @@
 
         .switch.on:before {
             content: "☀️";
-            transform: translateX(2.5rem) rotate(180deg);
+            transform: translateX(1.5rem) rotate(180deg);
         }
 
         .grid-demo {
@@ -110,13 +110,15 @@
                         elements which you might not use but would still waste your bandwidth and lead to larger
                         pagesize and slower loadtimes. Add to it some custom designing aspect which you might want to
                         add in later. This created problems maintaining which each update. So lightweight css
-                        provides a baseline css boilerplate which contains only all the basic elements (plus some selected utilities).</p>
-                        
+                        provides a baseline css boilerplate which contains only all the basic elements (plus some
+                        selected utilities).</p>
+
                     <p><strong>Note: </strong> The font, it uses no pixel values (or doesn't set a fixed
                         font size), <strong>that is by design</strong>. It is to respect user's chosen font-size (For
                         example: Extra Small / Small / Medium / Large / Extra Large in Chrome and so on).
                     </p>
-                    <p><strong>Note: </strong> It is strictly CSS only. All the JS used on the page is only for demonstration purpose.
+                    <p><strong>Note: </strong> It is strictly CSS only. All the JS used on the page is only for
+                        demonstration purpose.
                 </div>
                 <div class="content">
                     <h1 id="elements">Elements</h1>
@@ -959,7 +961,8 @@ print('This is some decently long line to see if this line goes out and overflow
 
                 <div class="content">
                     <h1>Credits</h1>
-                    <p>The night-mode toggle on the page is from <a href="https://codepen.io/lazercaveman/pen/RBoXNG">Ali Soueidan</a></p>
+                    <p>The night-mode toggle on the page is from <a
+                            href="https://codepen.io/lazercaveman/pen/RBoXNG">Ali Soueidan</a></p>
                 </div>
             </div><!-- ends container -->
         </main>
@@ -984,26 +987,31 @@ print('This is some decently long line to see if this line goes out and overflow
     if (nightToggle) {
         nightToggle.addEventListener('click', function () {
             if (bodySelector.classList.contains("night")) {
-                bodySelector.style.opacity = 0;
-                bodySelector.style.transition = 'opacity 150ms ease-in'
+                nightToggle.classList.remove("on");
                 setTimeout(function () {
-                    bodySelector.classList.remove("night");
-                    nightToggle.classList.remove("on");
-                    bodySelector.style.opacity = 1;
-                    bodySelector.style.transition = 'opacity 150ms ease-out'
-                }, 150);
+                    bodySelector.style.background = 'black';
+                    bodySelector.style.opacity = 0;
+                    bodySelector.style.transition = 'opacity 150ms ease-in'
+                    setTimeout(function () {
+                        bodySelector.classList.remove("night");
+                        bodySelector.style.opacity = 1;
+                        bodySelector.style.transition = 'opacity 150ms ease-in-out'
+                    }, 150);
+                }, 50);
             }
             else {
-                bodySelector.style.background = 'black';
-                bodySelector.style.opacity = 0;
-                bodySelector.style.transition = 'opacity 150ms ease-in'
+                nightToggle.classList.add("on");
                 setTimeout(function () {
-                    bodySelector.style.background = '';
-                    bodySelector.classList.add("night");
-                    nightToggle.classList.add("on");
-                    bodySelector.style.opacity = 1;
-                    bodySelector.style.transition = 'opacity 150ms ease-out'
-                }, 150);
+                    bodySelector.style.background = 'black';
+                    bodySelector.style.opacity = 0;
+                    bodySelector.style.transition = 'opacity 150ms ease-in'
+                    setTimeout(function () {
+                        bodySelector.style.background = '';
+                        bodySelector.classList.add("night");
+                        bodySelector.style.opacity = 1;
+                        bodySelector.style.transition = 'opacity 150ms ease-in-out'
+                    }, 150);
+                }, 50);
             }
         }, false);
     }

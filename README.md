@@ -3,6 +3,14 @@ Lightweight CSS - Ready to be used in projects.
 
 [For Complete Reference](https://ikevinshah.github.io/lightweight-css/dist/)
 
+Changes in 0.8.3:
+* Changed spacing on mobile and non-mobile.
+* Fixed Animation for night mode toggle.
+* Changed `.code`
+* Moved `min-width` to `.page`
+* Removed letter-spacing for h1..h6
+* Fixed width issues on `fieldset`
+
 Changes in 0.8.2: 
 * Fixed dark mode and bright mode colors.
 * Fixed some `transitions`

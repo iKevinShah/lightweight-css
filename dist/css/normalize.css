@@ -73,6 +73,10 @@ a, area, button, input, label, select, summary, textarea, [tabindex]{
     position:absolute
 }
 
+fieldset{
+    min-width:auto
+}
+
 input[type="search"] {
     -webkit-appearance: textfield
 }
